@@ -1,0 +1,37 @@
+version: '3'
+
+volumes:
+  shared_data:
+      driver: local
+  mysql_data:
+      driver: local
+  mongodb_data_container:
+
+services:
+  mysql_middleman:
+      image: mysql:5.7
+      volumes:
+        - mysql_data:/var/lib/mysql
+      environment:
+        MYSQL_ROOT_PASSWORD: root
+        MYSQL_DATABASE: keycloak
+        MYSQL_USER: keycloak
+        MYSQL_PASSWORD: password
+  keycloak_middleman:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 8080:8080
+      - 8443:8443
+    depends_on:
+      - mysql_middleman
+  mongo_middleman:
+    image: mongo:latest
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: middleman
+      MONGO_INITDB_ROOT_PASSWORD: soos
+    ports:
+      - 27017:27017
+    volumes:
+      - mongodb_data_container:/data/db
