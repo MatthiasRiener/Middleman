@@ -21,6 +21,10 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    volumes:
+       - ./imports/cache_reload/disable-theme-cache.cli:/opt/jboss/startup-scripts/disable-theme-cache.cli
+
+    #  - ./imports/standalone/standalone.xml:/opt/jboss/keycloak/standalone/configuration/standalone.xml
     ports:
       - 8080:8080
       - 8443:8443
