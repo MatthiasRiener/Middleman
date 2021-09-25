@@ -5,6 +5,7 @@ from app.db.settings import db, oidc, jwt, socketio
 
 from app.endpoints.landing.controllers import landing_page
 from app.endpoints.authentication.controllers import authentication_page
+from app.endpoints.profile.controllers import profile_page
 
 
 app = Flask(__name__, template_folder="./app/files/templates",
@@ -31,6 +32,7 @@ app.config.update({
 app.config['MONGODB_CONNECT'] = False
 
 
+app.register_blueprint(profile_page, url_prefix="/profile")
 app.register_blueprint(landing_page, url_prefix="/landing")
 app.register_blueprint(authentication_page, url_prefix="/authentication")
 
