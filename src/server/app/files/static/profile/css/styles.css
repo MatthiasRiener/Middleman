@@ -65,6 +65,7 @@ p {
     background-image: url("https://www.alucoildesign.com/assets/pages/media/profile/profile_user.jpg");
     background-size: cover;
     background-position: center;
+    border: 1px solid #383838;
 }
 
 
@@ -78,7 +79,7 @@ p {
 
 .banner-container {
     width: 100%;
-    height: 25vh;
+    height: 40vh;
     background-image: url("https://wallpaperaccess.com/full/14259.jpg");
     background-size: cover;
     background-position: center;
@@ -88,11 +89,36 @@ p {
 
     display: flex;
     flex-direction: column-reverse;
+    position: relative;
 }
 
+.change-banner-image-button {
+    display: flex;
+    background: white;
+    color: #383838;
+    align-items: center;
+
+
+
+    position: absolute;
+    right: 2vw;
+    bottom: 1vw;
+
+
+    padding: .2vw .5vw;
+
+    border-radius: 4px;
+
+    font-weight: 500;
+
+    cursor: pointer;
+}
+
+
+
 .profile-image-banner-section {
-    height: 22vh;
-    width: 22vh;
+    height: 11vw;
+    width: 11vw;
 
     border-radius: 50%;
 
@@ -115,4 +141,66 @@ p {
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
     box-sizing: border-box; 
+
+
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+
+.basic-info-right-side {
+    width: 53vw;
+    background: red;
+    height: 100%;
+}
+
+
+.section-group-sections {
+    height: 6vh;
+    background: #f8f7fc;
+
+    margin: 2vh 0vh;
+
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: row;
+    padding: 6px;
+
+    box-sizing: border-box; 
+
+}
+
+.section-group-item {
+    width: 11%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #bbbdcb;
+    border-radius: 10px;
+    margin-right: 6px;
+}
+
+.active {
+    background: white;
+    color: black;
+}
+
+.main-content {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.main-content-left-side {
+    width: 69%;
+}
+
+.main-content-right-side {
+    width: 29%;
+    background: red;
 }
