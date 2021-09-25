@@ -1,0 +1,69 @@
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+
+body {
+    margin: 0 !important;
+    padding: 0vh 15vw !important;
+    background: white;
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+p {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.top-bar {
+    width: 100%;
+    height: 8vh;
+
+    display: flex;
+    align-items: center;
+}
+
+.top-bar-item {
+    margin: 0 .8vw;
+}
+
+#top-bar-right-section {
+    margin-left: auto !important;
+
+    display: flex;
+    align-items: center;
+}
+
+.top-bar-icon {
+    margin: 0 .4vw;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.become-middleman-button {
+    display: flex;
+    align-items: center;
+    background: #383838;
+    border-radius: 5px;
+
+    padding: 0.4vw;
+
+    margin: 0 2vw;
+
+    font-size: .9rem;
+    color: white;
+
+}
+
+#top-bar-profile-picture {
+    width: 2vw;
+    height: 2vw;
+    border-radius: 50%;
+    background-image: url("https://www.alucoildesign.com/assets/pages/media/profile/profile_user.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
