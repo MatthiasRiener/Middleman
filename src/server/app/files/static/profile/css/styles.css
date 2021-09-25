@@ -28,6 +28,8 @@ p {
 
 .top-bar-item {
     margin: 0 .8vw;
+    display: flex;
+    align-items: center;
 }
 
 #top-bar-right-section {
@@ -38,7 +40,7 @@ p {
 }
 
 .top-bar-icon {
-    margin: 0 .4vw;
+    margin: 0 .6vw;
     font-weight: bold;
     font-size: 1.3rem;
 }
@@ -149,7 +151,7 @@ p {
 
 
 .basic-info-right-side {
-    width: 53vw;
+    width: 31vw;
     background: red;
     height: 100%;
 }
@@ -182,6 +184,8 @@ p {
     color: #bbbdcb;
     border-radius: 10px;
     margin-right: 6px;
+
+    cursor: pointer;
 }
 
 .active {
@@ -202,5 +206,56 @@ p {
 
 .main-content-right-side {
     width: 29%;
-    background: red;
+    background: transparent;
+    margin-top: 3vh;
+}
+
+.section-additional-infos {
+    width: 100%;
+    height: auto;
+    border: 1px solid #dadada;
+    border-radius: 15px;
+    padding: 1vw;
+    box-sizing: border-box;
+}
+
+.additional-infos-header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+
+    margin-bottom: 2vh;
+}
+
+.additional-infos-header > p {
+    font-size: 1.3rem;
+}
+
+.additional-info-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 1vw;
+}
+
+.additional-info-item > div {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1vw;
+}
+
+.additional-info-item > div > p:nth-child(1) {
+    color: #bbbdcb;
+    text-transform: uppercase;
+    font-size: .9rem;
+    font-weight: 500;
+}
+
+.additional-info-item > div > p:nth-child(2) {
+    color: black;
+    font-size: 1rem;
+}
+.additional-info-icon {
+    color: #383838;
+    font-size: 1.4rem;
 }

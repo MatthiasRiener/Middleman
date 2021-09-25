@@ -16,7 +16,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
     crossorigin="anonymous"></script>
     <script src={{ url_for('static', filename="profile/js/script.js" ) }} type="text/javascript"
-    ></script>
+    defer ></script>
 
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -107,7 +107,60 @@
             </div>
         </div>
         <div class="main-content-right-side">
+            <div class="section-additional-infos">
+                <div class="additional-infos-header">
+                    <p>Additional Details</p>
+                </div>
 
+                <div class="additional-info-item">
+                    <ion-icon name="happy" class="additional-info-icon"></ion-icon>
+                    <div>
+                        <p>Rating</p>
+                        <p>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon> 
+                            <ion-icon name="star-half"></ion-icon>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="additional-info-item">
+                    <ion-icon name="calendar" class="additional-info-icon"></ion-icon>
+                    <div>
+                        <p>Active since</p>
+                        <p>September, 2021</p>
+                    </div>
+                </div>
+
+                <div class="additional-info-item">
+                    <ion-icon name="earth" class="additional-info-icon"></ion-icon>
+                    <div>
+                        <p>Trades done</p>
+                        <p>452</p>
+                    </div>
+                </div>
+
+                
+
+                <div class="additional-info-item">
+                    <ion-icon name="map" class="additional-info-icon"></ion-icon>
+                    <div>
+                        <p>Location</p>
+                        <p>Linz, Austria</p>
+                    </div>
+                </div>
+
+                <div class="additional-info-item">
+                    <ion-icon name="chatbubbles" class="additional-info-icon"></ion-icon>
+                    <div>
+                        <p>Average respond time</p>
+                        <p>Less than one hour</p>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </div>
 
