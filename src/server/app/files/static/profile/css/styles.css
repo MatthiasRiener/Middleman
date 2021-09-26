@@ -2,15 +2,13 @@
     font-family: 'Poppins', sans-serif;
 }
 
-
 body {
     margin: 0 !important;
     padding: 0vh 15vw !important;
     background: white;
-
+    padding-bottom: 10vh !important;
     display: flex;
     flex-direction: column;
-
 }
 
 p {
@@ -21,7 +19,6 @@ p {
 .top-bar {
     width: 100%;
     height: 8vh;
-
     display: flex;
     align-items: center;
 }
@@ -30,11 +27,11 @@ p {
     margin: 0 .8vw;
     display: flex;
     align-items: center;
+    font-size: 1.05rem;
 }
 
 #top-bar-right-section {
     margin-left: auto !important;
-
     display: flex;
     align-items: center;
 }
@@ -50,14 +47,10 @@ p {
     align-items: center;
     background: #383838;
     border-radius: 5px;
-
     padding: 0.4vw;
-
     margin: 0 2vw;
-
     font-size: .9rem;
     color: white;
-
 }
 
 #top-bar-profile-picture {
@@ -70,25 +63,20 @@ p {
     border: 1px solid #383838;
 }
 
-
 .main-container-profile-banner {
     width: 100%;
     height: auto;
     margin-top: 3vh;
-
 }
-
 
 .banner-container {
     width: 100%;
-    height: 40vh;
+    height: 35vh;
     background-image: url("https://wallpaperaccess.com/full/14259.jpg");
     background-size: cover;
     background-position: center;
-
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
-
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
     display: flex;
     flex-direction: column-reverse;
     position: relative;
@@ -97,37 +85,24 @@ p {
 .change-banner-image-button {
     display: flex;
     background: white;
-    color: #383838;
+    color: black;
     align-items: center;
-
-
-
     position: absolute;
-    right: 2vw;
+    right: 1vw;
     bottom: 1vw;
-
-
-    padding: .2vw .5vw;
-
+    padding: .4vw;
     border-radius: 4px;
-
-    font-weight: 500;
-
+    font-weight: bold;
     cursor: pointer;
 }
 
-
-
 .profile-image-banner-section {
-    height: 11vw;
-    width: 11vw;
-
+    height: 10vw;
+    width: 10vw;
     border-radius: 50%;
-
     background-image: url("https://www.alucoildesign.com/assets/pages/media/profile/profile_user.jpg");
     background-size: cover;
     background-position: center;
-
     margin-left: 3vw;
     transform: translateY(50%);
     border: 5px solid white;
@@ -135,56 +110,41 @@ p {
 
 .basic-information-container {
     width: 100%;
-    height: 25vh;
+    height: 20vh;
     background: white;
-    border: 1px solid #dadada;
-
-
-    border-bottom-left-radius: 30px;
-    border-bottom-right-radius: 30px;
-    box-sizing: border-box; 
-
-
+    border: 2px solid #dadada49;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    box-sizing: border-box;
     display: flex;
     flex-direction: row-reverse;
 }
 
-
 .basic-info-right-side {
-    width: 31vw;
-    background: red;
+    width: 35vw;
     height: 100%;
 }
-
 
 .section-group-sections {
     height: 6vh;
     background: #f8f7fc;
-
     margin: 2vh 0vh;
-
     border-radius: 10px;
-
     display: flex;
     flex-direction: row;
     padding: 6px;
-
-    box-sizing: border-box; 
-
+    box-sizing: border-box;
 }
 
 .section-group-item {
     width: 11%;
     height: 100%;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     color: #bbbdcb;
     border-radius: 10px;
     margin-right: 6px;
-
     cursor: pointer;
 }
 
@@ -201,11 +161,11 @@ p {
 }
 
 .main-content-left-side {
-    width: 69%;
+    width: 74%;
 }
 
 .main-content-right-side {
-    width: 29%;
+    width: 24%;
     background: transparent;
     margin-top: 3vh;
 }
@@ -213,21 +173,21 @@ p {
 .section-additional-infos {
     width: 100%;
     height: auto;
-    border: 1px solid #dadada;
+    border: 2px solid #dadada49;
     border-radius: 15px;
     padding: 1vw;
     box-sizing: border-box;
+    margin-bottom: 2vh;
 }
 
 .additional-infos-header {
     width: 100%;
     display: flex;
     flex-direction: row;
-
     margin-bottom: 2vh;
 }
 
-.additional-infos-header > p {
+.additional-infos-header>p {
     font-size: 1.3rem;
 }
 
@@ -238,24 +198,175 @@ p {
     margin-bottom: 1vw;
 }
 
-.additional-info-item > div {
+.additional-info-item>div {
     display: flex;
     flex-direction: column;
     margin-left: 1vw;
 }
 
-.additional-info-item > div > p:nth-child(1) {
+.additional-info-item>div>p:nth-child(1) {
     color: #bbbdcb;
     text-transform: uppercase;
     font-size: .9rem;
     font-weight: 500;
 }
 
-.additional-info-item > div > p:nth-child(2) {
+.additional-info-item>div>p:nth-child(2) {
     color: black;
     font-size: 1rem;
 }
+
 .additional-info-icon {
     color: #383838;
     font-size: 1.4rem;
+}
+
+.basic-info-top-container {
+    height: 60%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.basic-info-bottom-container {
+    height: 40%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.basic-info-top-left {
+    display: flex;
+    flex-direction: column;
+    transform: translateY(25%);
+}
+
+.basic-info-top-left>p:nth-child(1) {
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+
+.basic-info-top-left>p:nth-child(2) {
+    font-size: 1.1rem;
+    color: #838383;
+    font-weight: 400;
+}
+
+.basic-info-edit-profile {
+    display: flex;
+    align-items: center;
+    margin-left: auto !important;
+    height: auto;
+    margin: 0.5vw;
+    background: #383838;
+    color: white;
+    padding: .2vw .5vw;
+    border-radius: 4px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.basic-info-item-link {
+    padding: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #dadada71;
+    border-radius: 6px;
+    font-size: 1.5rem;
+    margin-right: 0.7vw;
+    cursor: pointer;
+}
+
+.basic-info-item-link:last-of-type {
+    margin-left: auto;
+    margin-right: 1.5vw;
+}
+
+.map-section {
+    width: 100%;
+    height: 40vh;
+    border: 3px solid #dadada71;
+    border-radius: 10px;
+}
+
+.ratings-basic-info {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+
+.ratings-basic-info>p:nth-child(1) {
+    font-weight: bold;
+    font-size: 2.4rem;
+    margin: 0 !important;
+    margin-right: .4vw !important;
+}
+
+.ratings-basic-icon {
+    padding: 0.2vw 0vw;
+    transform: translateY(-40%);
+    font-size: 1.2rem;
+}
+
+.ratings-progress-bar-section {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.progress-item {
+    display: flex;
+    flex-direction: row;
+    
+    width: 100%;
+    align-items: center;
+    margin-top: 1vh;
+}
+
+.progress-item > p {
+    font-size: .9rem;
+    color: #b4b5c5;
+
+}
+
+.progress-item > p:nth-child(1) {
+    font-weight: 500;
+    min-width: 1vw;
+    text-align: right;
+}
+
+.progress-item > p:nth-child(3) {
+    color: #3b3e62;
+    font-weight: 600;
+    margin: 0vw .5vw !important;
+
+}
+
+
+
+.progressbar {
+    background-color: #f3f2f9;
+    border-radius: 3px;
+    padding: 2px;
+    min-width: 60%;
+    margin: 0vw .5vw;
+}
+
+.progressbar>div {
+    width: 40%;
+    height: 10px;
+    /* Adjust with JavaScript */
+    border-radius: 3px;
+}
+
+.view-all-reviews-button {
+    width: 50%;
+    border: 2px solid #dadada71;
+    margin: 1vw .5vw;
+    padding: .4vw .7vw !important;
+    margin-bottom: 0;
+    border-radius: 7px;
 }
