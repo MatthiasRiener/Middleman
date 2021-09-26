@@ -10,3 +10,6 @@ var map = new mapboxgl.Map({
 const marker1 = new mapboxgl.Marker({ color: 'black'})
 .setLngLat([12.554729, 55.70651])
 .addTo(map);
+
+map.addControl(new mapboxgl.FullscreenControl());
+
