@@ -4,11 +4,18 @@ from ..authentication.authservice import AuthService
 
 authentication_page = Blueprint("authentication", __name__)
 
+auth_service = AuthService()
+# for future: use DI
+
 
 @authentication_page.route('/log-in', methods=["GET"])
 @oidc.require_login
 def login():
-    print('hfuodsonfsjda')
+
+    access_token = oidc.get_access_token()
+    refresh_token = oidc.get_refresh_token()
+
+    auth_service.login(access_token, refresh_token)
 
     user_credentials = oidc.user_getinfo(
         ['preferred_username', 'email', 'sub', 'roles'])
@@ -24,17 +31,20 @@ def login():
 @oidc.require_login
 def logout():
     user_credentials = oidc.user_getinfo(
-        ['preferred_username', 'email', 'sub', 'roles'])
+        ['preferred_username'])
 
     user_name = user_credentials.get('preferred_username')
 
-    auth_service = AuthService()
-    # for future: use DI
-
     refresh_token = oidc.get_refresh_token()
-    # der clown gibt keinen refresh token
-
-    print(refresh_token)
 
     auth_service.logout(refresh_token)
+    oidc.logout()
+
     return "User " + user_name + " logged out"
+
+
+@authentication_page.route('/refresh', methods=["GET"])
+@oidc.require_login
+def is_active():
+    return auth_service.refresh()
+
