@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,22 +11,28 @@
     <!--Icons-->
     <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
 
-    <link rel="stylesheet" type="text/css"
-    href="{{ url_for('static', filename='/profile/css/styles.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/profile/css/styles.css') }}" />
 
-    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
-    crossorigin="anonymous"></script>
-    <script src={{ url_for('static', filename="profile/js/script.js" ) }} type="text/javascript"
-    defer ></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src={{ url_for('static', filename="profile/js/script.js" ) }} type="text/javascript" defer></script>
 
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;800&display=swap" rel="stylesheet">
 
-    
+
+    <!--Mapbox-->
+
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+    <script src={{ url_for('static', filename="profile/js/maps.js" ) }} type="text/javascript" defer></script>
+
+
 </head>
+
 <body>
-    
+
     <div class="top-bar">
         <div class="top-bar-item">
             <p>Posts</p>
@@ -44,10 +51,10 @@
         </div>
 
         <div id="top-bar-right-section">
-            <ion-icon name="search-outline" class="top-bar-icon" ></ion-icon>
-            <ion-icon name="bookmark-outline" class="top-bar-icon" ></ion-icon>
-            <ion-icon name="people-outline" class="top-bar-icon" ></ion-icon>
-            <ion-icon name="notifications-outline" class="top-bar-icon" ></ion-icon>
+            <ion-icon name="search-outline" class="top-bar-icon"></ion-icon>
+            <ion-icon name="bookmark-outline" class="top-bar-icon"></ion-icon>
+            <ion-icon name="people-outline" class="top-bar-icon"></ion-icon>
+            <ion-icon name="notifications-outline" class="top-bar-icon"></ion-icon>
 
             <div class="become-middleman-button">
                 <p>Werde Middleman</p>
@@ -61,49 +68,84 @@
         </div>
 
     </div>
-    
+
     <div class="main-content">
         <div class="main-content-left-side">
             <div class="main-container-profile-banner">
                 <div class="banner-container">
                     <div class="change-banner-image-button">
-                        <p>Change</p>
+                        <ion-icon name="create-outline"></ion-icon>
                     </div>
                     <div class="profile-image-banner-section">
                     </div>
                 </div>
                 <div class="basic-information-container">
                     <div class="basic-info-right-side">
-        
+                        <div class="basic-info-top-container">
+                            <div class="basic-info-top-left">
+                                <p>Assaf Rappaport</p>
+                                <p>Certified Middleman</p>
+                            </div>
+                            <div class="basic-info-edit-profile">
+                                <p>Edit Profile</p>
+                            </div>
+                        </div>
+                        <div class="basic-info-bottom-container">
+                            <div class="basic-info-item-link">
+                                <ion-icon name="logo-twitter"></ion-icon>
+                            </div>
+                            <div class="basic-info-item-link">
+                                <ion-icon name="logo-facebook"></ion-icon>
+                            </div>
+                            <div class="basic-info-item-link">
+                                <ion-icon name="logo-instagram"></ion-icon>
+                            </div>
+                            <div class="basic-info-item-link">
+                                <ion-icon name="logo-tiktok"></ion-icon>
+                            </div>
+                            <div class="basic-info-item-link">
+                                <ion-icon name="logo-discord"></ion-icon>
+                            </div>
+                            <div class="basic-info-item-link">
+                                <ion-icon name="bookmark-outline"></ion-icon>
+                            </div>
+
+
+                        </div>
                     </div>
                 </div>
             </div>
-        
-        
+
+
             <div class="section-group-sections">
                 <div class="section-group-item active">
                     <p>Overview</p>
                 </div>
-        
+
                 <div class="section-group-item ">
                     <p>Groups</p>
                 </div>
-        
+
                 <div class="section-group-item ">
                     <p>Posts</p>
                 </div>
-        
+
                 <div class="section-group-item ">
                     <p>Pages</p>
                 </div>
-        
+
                 <div class="section-group-item ">
                     <p>Events</p>
                 </div>
-        
+
                 <div class="section-group-item ">
                     <p>More</p>
                 </div>
+            </div>
+
+
+            <div class="map-section" id="map">
+
             </div>
         </div>
         <div class="main-content-right-side">
@@ -115,12 +157,12 @@
                 <div class="additional-info-item">
                     <ion-icon name="happy" class="additional-info-icon"></ion-icon>
                     <div>
-                        <p>Rating</p>
+                        <p>Rating (+6729)</p>
                         <p>
                             <ion-icon name="star"></ion-icon>
                             <ion-icon name="star"></ion-icon>
                             <ion-icon name="star"></ion-icon>
-                            <ion-icon name="star"></ion-icon> 
+                            <ion-icon name="star"></ion-icon>
                             <ion-icon name="star-half"></ion-icon>
                         </p>
                     </div>
@@ -142,7 +184,7 @@
                     </div>
                 </div>
 
-                
+
 
                 <div class="additional-info-item">
                     <ion-icon name="map" class="additional-info-icon"></ion-icon>
@@ -161,11 +203,67 @@
                 </div>
 
             </div>
+
+            <div class="section-additional-infos">
+                <div class="additional-infos-header">
+                    <p>Customer reviews</p>
+                </div>
+                <div class="ratings-basic-info">
+                    <p>4,7</p>
+                    <ion-icon name="star" class="ratings-basic-icon"></ion-icon>
+                    <ion-icon name="star" class="ratings-basic-icon"></ion-icon>
+                    <ion-icon name="star" class="ratings-basic-icon"></ion-icon>
+                    <ion-icon name="star" class="ratings-basic-icon"></ion-icon>
+                    <ion-icon name="star-half" class="ratings-basic-icon"></ion-icon>
+                </div>
+
+                <div class="ratings-progress-bar-section">
+                    <div class="progress-item">
+                        <p>5</p>
+                        <div class="progressbar" ><div style="width: 55%; background-color: #76db9a;"></div></div>
+                        <p>55%</p>
+                        <p>982</p>
+                    </div>
+
+                    <div class="progress-item" >
+                        <p>4</p>
+                        <div class="progressbar" ><div style="width: 16%; background-color:#b7ea83;"></div></div>
+                        <p>16%</p>
+                        <p>205</p>
+                    </div>
+
+                    <div class="progress-item">
+                        <p>3</p>
+                        <div class="progressbar"><div style="width: 12%; background-color: #f6d757;"></div></div>
+                        <p>12%</p>
+                        <p>65</p>
+                    </div>
+
+                    <div class="progress-item">
+                        <p>2</p>
+                        <div class="progressbar"><div style="background-color: #fab850; width: 8%;"></div></div>
+                        <p>8%</p>
+                        <p>17</p>
+                    </div>
+
+                    <div class="progress-item">
+                        <p>1</p>
+                        <div class="progressbar"><div style="background-color: #f17a55; width:9%;"></div></div>
+                        <p>9%</p>
+                        <p>46</p>
+                    </div>
+
+                    <div class="view-all-reviews-button">
+                        <p>View all reviews</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
 
-    
+
 
 </body>
+
 </html>
