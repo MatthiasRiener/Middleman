@@ -27,7 +27,7 @@
     <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
     <script src={{ url_for('static', filename="profile/js/maps.js" ) }} type="text/javascript" defer></script>
-    
+
     <script src={{ url_for('static', filename="auth/AuthenticationService.js" ) }} type="text/javascript"></script>
 
 
@@ -38,7 +38,7 @@
             setAccessToken("{{ access }}");
             setRefreshToken("{{ refresh }}");
         }
-        
+
     </script>
 
 </head>
@@ -155,6 +155,149 @@
                 </div>
             </div>
 
+            <div class="section-about-me">
+                <div class="top-section-about-me">
+                    <p>Summary</p>
+                    <div class="edit-button-about-me">
+                        <p>Edit</p>
+                    </div>
+                </div>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi magnam culpa fuga doloribus inventore
+                    deserunt maxime et laboriosam sequi iusto dicta delectus eligendi accusantium, aperiam tempora
+                    ratione quisquam asperiores placeat?</p>
+            </div>
+
+            <div class="section-about-me">
+                <div class="top-section-about-me">
+                    <p>Product Categories</p>
+                    <div class="edit-button-about-me" style="background: white;">
+                        <ion-icon name="ellipsis-vertical-outline" style="font-size: 1.4rem; color: black"></ion-icon>
+                    </div>
+                </div>
+
+                
+                
+                <div class="product-group-item-container">
+
+                    <div class="product-group-item">
+                        <div class="product-group-banner">
+                            <ion-icon name="american-football-outline"></ion-icon>
+                        </div>
+                        <div class="product-group-details-container">
+                            <p>Sporting Goods</p>
+                            <p>300 Trades</p>
+                        </div>
+                    </div>
+    
+                    <div class="product-group-item">
+                        <div class="product-group-banner">
+                            <ion-icon name="american-football-outline"></ion-icon>
+                        </div>
+                        <div class="product-group-details-container">
+                            <p>Sporting Goods</p>
+                            <p>300 Trades</p>
+                        </div>
+                    </div>
+                    <div class="product-group-item">
+                        <div class="product-group-banner">
+                            <ion-icon name="american-football-outline"></ion-icon>
+                        </div>
+                        <div class="product-group-details-container">
+                            <p>Sporting Goods</p>
+                            <p>300 Trades</p>
+                        </div>
+                    </div>
+    
+                    <div class="product-group-item">
+                        <div class="product-group-banner">
+                            <ion-icon name="american-football-outline"></ion-icon>
+                        </div>
+                        <div class="product-group-details-container">
+                            <p>Sporting Goods</p>
+                            <p>300 Trades</p>
+                        </div>
+                    </div>
+    
+                    <div class="product-group-item">
+                        <div class="product-group-banner">
+                            <ion-icon name="american-football-outline"></ion-icon>
+                        </div>
+                        <div class="product-group-details-container">
+                            <p>Sporting Goods</p>
+                            <p>300 Trades</p>
+                        </div>
+                    </div>
+                </div>
+
+                
+            </div>
+            
+
+            <div class="section-about-me">
+                <div class="top-section-about-me">
+                    <p>Reviews</p>
+                    <div class="edit-button-about-me" style="background: white;">
+                        <ion-icon name="ellipsis-vertical-outline" style="font-size: 1.4rem; color: black"></ion-icon>
+                    </div>
+                </div>
+
+
+                <div class="review-item">
+
+                    <div class="splitter-review-item">
+                        <div>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                        </div>
+                        <p class="review-title">Very nice middleman, faster than expected!</p>
+                    </div>
+
+
+                    <div class="review-item-reviewer-container">
+                        <div class="reviewer-profile-picture"></div>
+                        <p>Radhika Dutt</p>
+                        <p>3 months ago</p>
+                    </div>
+                    <div class="review-text">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, eius numquam rem omnis in voluptas iste repellendus blanditiis? At quaerat eius accusamus alias obcaecati aut dolores nemo nostrum reprehenderit similique!</p>
+                    </div>
+
+                    <p class="answer-review">
+                        Answer this review
+                    </p>
+                </div>
+
+                <div class="review-item">
+
+                    <div class="splitter-review-item">
+                        <div>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                            <ion-icon name="star"></ion-icon>
+                        </div>
+                        <p class="review-title">Very nice middleman, faster than expected!</p>
+                    </div>
+
+
+                    <div class="review-item-reviewer-container">
+                        <div class="reviewer-profile-picture"></div>
+                        <p>Radhika Dutt</p>
+                        <p>3 months ago</p>
+                    </div>
+                    <div class="review-text">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, eius numquam rem omnis in voluptas iste repellendus blanditiis? At quaerat eius accusamus alias obcaecati aut dolores nemo nostrum reprehenderit similique!</p>
+                    </div>
+
+                    <p class="answer-review">
+                        Answer this review
+                    </p>
+                </div>
+            </div>
 
         </div>
         <div class="main-content-right-side">
@@ -208,14 +351,14 @@
                     <ion-icon name="map" class="additional-info-icon"></ion-icon>
                     <div>
                         <p>Location</p>
-                        <p>Linz, Austria</p>
+                        <p>Copenhagen, Denmark</p>
                     </div>
                 </div>
 
                 <div class="additional-info-item">
                     <ion-icon name="time" class="additional-info-icon"></ion-icon>
                     <div>
-                        <p>Average respond time</p>
+                        <p>Average response time</p>
                         <p>Less than one hour</p>
                     </div>
                 </div>
@@ -225,7 +368,9 @@
                     <ion-icon name="book" class="additional-info-icon"></ion-icon>
                     <div>
                         <p>Curriculum vitae</p>
-                        <a href="#"><p>View</p></a>
+                        <a href="#">
+                            <p>View</p>
+                        </a>
                     </div>
                 </div>
 
@@ -251,7 +396,6 @@
                             <div style="width: 55%; background-color: #76db9a;"></div>
                         </div>
                         <p>55%</p>
-                        <p>982</p>
                     </div>
 
                     <div class="progress-item">
@@ -260,7 +404,6 @@
                             <div style="width: 16%; background-color:#b7ea83;"></div>
                         </div>
                         <p>16%</p>
-                        <p>205</p>
                     </div>
 
                     <div class="progress-item">
@@ -269,7 +412,6 @@
                             <div style="width: 12%; background-color: #f6d757;"></div>
                         </div>
                         <p>12%</p>
-                        <p>65</p>
                     </div>
 
                     <div class="progress-item">
@@ -278,7 +420,6 @@
                             <div style="background-color: #fab850; width: 8%;"></div>
                         </div>
                         <p>8%</p>
-                        <p>17</p>
                     </div>
 
                     <div class="progress-item">
@@ -287,7 +428,6 @@
                             <div style="background-color: #f17a55; width:9%;"></div>
                         </div>
                         <p>9%</p>
-                        <p>46</p>
                     </div>
 
                     <div class="view-all-reviews-button">
