@@ -2,6 +2,8 @@ from keycloak import KeycloakOpenID
 from datetime import datetime
 import json
 
+from app.annotations.token.token_service import jwt_token_encrypted, jwt_token_decrypted
+
 
 class AuthService:
     f = open('client_secrets.json')
@@ -14,16 +16,14 @@ class AuthService:
         self.configure()
 
     access_token = None
+    encrypted_token = None
     refresh_token = None
 
+    @jwt_token_encrypted
     def login(self, access_token, refresh_token):
         self.access_token = access_token
         self.refresh_token = refresh_token
-
-        print("Refresh" + self.refresh_token)
-        print("Access" + self.access_token)
-
-        return
+        return access_token
 
     def logout(self, refresh_token):
         self.keycloak_openid.logout(refresh_token)
