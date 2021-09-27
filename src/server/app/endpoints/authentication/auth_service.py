@@ -21,9 +21,7 @@ class AuthService:
 
     @jwt_token_encrypted
     def login(self, access_token, refresh_token):
-        self.access_token = access_token
-        self.refresh_token = refresh_token
-        return access_token
+        return access_token, refresh_token
 
     def logout(self, refresh_token):
         self.keycloak_openid.logout(refresh_token)

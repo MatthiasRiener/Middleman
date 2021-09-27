@@ -17,8 +17,8 @@ def login():
     access_token = oidc.get_access_token()
     refresh_token = oidc.get_refresh_token()
 
-    encrypted = auth_service.login(access_token, refresh_token)
-    auth_service.encrypted_token = encrypted
+    encrypted_acc, encrypted_ref = auth_service.login(access_token, refresh_token)
+    auth_service.encrypted_token = encrypted_ref
 
     user_credentials = oidc.user_getinfo(
         ['preferred_username', 'email', 'sub', 'roles'])
@@ -27,7 +27,10 @@ def login():
     user_name = user_credentials.get('preferred_username')
     user_mail = user_credentials.get('email')
 
-    return encrypted
+    redir = render_template('profile/index.html',
+                            access=encrypted_acc, refresh=encrypted_ref, newLogIn=True)
+
+    return redir
 
 
 @authentication_page.route('/log-out', methods=["GET"])
