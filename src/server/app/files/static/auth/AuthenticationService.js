@@ -13,6 +13,7 @@ function sendRequestToServer(args) {
 
 
 function ajaxRequest(resolve, reject, args) {
+    console.log(getAccessToken())
     $.ajax({
         type: args.type,
         url: baseURL + args.url,
@@ -32,7 +33,7 @@ function ajaxRequest(resolve, reject, args) {
             }
         },
         success: function (data) {
-            resolve(JSON.parse(data));
+            resolve(data);
         },
     })
 }
@@ -65,7 +66,7 @@ function silentLogin(callback, args, resolve, reject) {
 
 
 function setAccessToken(access) {
-    if (checkToken(access)) {
+    if (!checkToken(access)) {
         return;
     }
 
@@ -73,7 +74,7 @@ function setAccessToken(access) {
 }
 
 function setRefreshToken(refresh) {
-    if (checkToken(refresh)) {
+    if (!checkToken(refresh)) {
         return;
     }
 
