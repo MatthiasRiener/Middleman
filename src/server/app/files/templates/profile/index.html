@@ -27,7 +27,19 @@
     <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
     <script src={{ url_for('static', filename="profile/js/maps.js" ) }} type="text/javascript" defer></script>
+    
+    <script src={{ url_for('static', filename="auth/AuthenticationService.js" ) }} type="text/javascript" defer></script>
 
+
+
+    <script>
+
+        if ("{{ newLogIn }}") {
+            aService.setAccessToken("{{ access }}");
+            aService.setRefreshToken("{{ refresh }}");
+        }
+        
+    </script>
 
 </head>
 
