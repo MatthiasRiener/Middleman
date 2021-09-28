@@ -23,6 +23,17 @@ p {
     align-items: center;
 }
 
+.top-bar-logo {
+    width: 1.8vw;
+    height: 1.8vw;
+    background-image: url("/static/profile/img/logo_topbar.png");
+    background-size: cover;
+    background-position: center;
+    margin-right: 1vw;
+    border-radius: 8px;
+    transform: translateY(-10%);
+}
+
 .top-bar-item {
     margin: 0 .8vw;
     display: flex;
@@ -417,10 +428,7 @@ p {
     box-sizing: border-box;
     padding: 1vw 0vw;
     border-top: 2px solid #dadada71;
-
 }
-
-
 
 .review-title {
     font-weight: 500;
@@ -488,12 +496,15 @@ p {
     flex-wrap: wrap;
 }
 
-
 .product-group-item {
     width: 33%;
     display: flex;
     padding: 1vw 0vw;
+}
 
+.top-bar-image {
+    height: 3vh;
+    width: auto;
 }
 
 .product-group-banner {
@@ -501,11 +512,9 @@ p {
     height: 3vw;
     background: #f8f7fc;
     border-radius: 6px;
-
     display: flex;
     justify-content: center;
     align-items: center;
-
     font-size: 1.5rem;
 }
 
@@ -517,12 +526,12 @@ p {
     justify-content: center;
 }
 
-.product-group-details-container > p:nth-child(1) {
+.product-group-details-container>p:nth-child(1) {
     font-weight: 500;
     font-size: 1rem;
 }
 
-.product-group-details-container > p:nth-child(2) {
+.product-group-details-container>p:nth-child(2) {
     font-weight: 500;
     font-size: .85rem;
     color: #767989;
