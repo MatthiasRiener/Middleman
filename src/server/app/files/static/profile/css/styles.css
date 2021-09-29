@@ -16,11 +16,35 @@ p {
     padding: 0 !important;
 }
 
+.scroll-button {
+    position: fixed;
+    right: 1%;
+    bottom: 3%;
+    background: white;
+    border-radius: 15px;
+    z-index: 10;
+    opacity: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: rgba(99, 99, 99, 0.4) 0px 2px 8px 0px;
+}
+
+.scroll-button>p {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin: 0 !important;
+    padding: .5vh 1vw !important;
+}
+
 .top-bar {
-    width: 100%;
+    width: 70vw;
     height: 8vh;
     display: flex;
     align-items: center;
+    position: fixed;
+    z-index: 2;
+    background: white;
 }
 
 .top-bar-logo {
@@ -39,6 +63,7 @@ p {
     display: flex;
     align-items: center;
     font-size: 1.05rem;
+    cursor: pointer;
 }
 
 #top-bar-right-section {
@@ -51,6 +76,7 @@ p {
     margin: 0 .6vw;
     font-weight: bold;
     font-size: 1.3rem;
+    cursor: pointer;
 }
 
 .become-middleman-button {
@@ -64,6 +90,14 @@ p {
     color: white;
 }
 
+#container-around-top-bar {
+    height: 8vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 #top-bar-profile-picture {
     width: 2vw;
     height: 2vw;
@@ -71,8 +105,59 @@ p {
     background-image: url("https://www.alucoildesign.com/assets/pages/media/profile/profile_user.jpg");
     background-size: cover;
     background-position: center;
-    border: 1px solid #383838;
+    border: 2px solid #383838;
+    position: relative;
+    cursor: pointer;
 }
+
+.profile-info-popup {
+    position: absolute;
+    width: 15vw;
+    height: auto;
+    background: white;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transform: translate(-40%, 15%);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1vw 1vw;
+    box-sizing: border-box;
+
+    border-radius: 10px;
+}
+
+.profile-info-popup-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    padding: .4vw .4vw;
+
+    color: #878c90;
+    font-size: 1rem;
+
+    cursor: pointer;
+}
+
+.profile-info-popup-item:hover {
+    color: #35383b;
+    font-weight: 500;
+
+}
+
+.profile-info-vert-aligner {
+    width: 80%;
+    height: 2px;
+    background: #878c90;
+    margin: .4vw 0;
+}
+
+.profile-info-icon {
+    margin-right: .5vw ;
+    font-size: 1.2rem;
+}
+
+
 
 .main-container-profile-banner {
     width: 100%;
@@ -137,7 +222,7 @@ p {
 }
 
 .section-group-sections {
-    height: 6vh;
+    height: auto;
     background: #f8f7fc;
     margin: 2vh 0vh;
     border-radius: 10px;
@@ -148,7 +233,7 @@ p {
 }
 
 .section-group-item {
-    width: 11%;
+    width: auto;
     height: 100%;
     display: flex;
     align-items: center;
@@ -157,11 +242,17 @@ p {
     border-radius: 10px;
     margin-right: 6px;
     cursor: pointer;
+    padding: .5vw 1vw;
+}
+
+.section-group-item:hover {
+    color: black;
 }
 
 .active {
     background: white;
     color: black;
+    font-weight: 500;
 }
 
 .main-content {
@@ -169,6 +260,7 @@ p {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin-top: 8vh;
 }
 
 .main-content-left-side {
@@ -279,7 +371,7 @@ p {
 }
 
 .basic-info-item-link {
-    padding: 0.5rem;
+    padding: 0.3rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -515,6 +607,7 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 2px solid #383838;
     font-size: 1.5rem;
 }
 
