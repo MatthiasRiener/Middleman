@@ -133,7 +133,7 @@ p {
 
     padding: .4vw .4vw;
 
-    color: #878c90;
+    color: #35383b;
     font-size: 1rem;
 
     cursor: pointer;
@@ -146,15 +146,15 @@ p {
 }
 
 .profile-info-vert-aligner {
-    width: 80%;
+    width: 100%;
     height: 2px;
     background: #878c90;
-    margin: .4vw 0;
+    margin: .6vw 0;
 }
 
 .profile-info-icon {
     margin-right: .5vw ;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
 }
 
 
@@ -371,13 +371,13 @@ p {
 }
 
 .basic-info-item-link {
-    padding: 0.3rem;
+    padding: 0.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
     border: 2px solid #dadada71;
     border-radius: 6px;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     margin-right: 0.7vw;
     cursor: pointer;
 }
@@ -470,6 +470,8 @@ p {
     padding: .4vw .7vw !important;
     margin-bottom: 0;
     border-radius: 7px;
+
+    font-weight: 500;
 }
 
 .mapbox-gl-draw_polygon {
@@ -607,7 +609,7 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 2px solid #383838;
+    border: 3px solid #383838;
     font-size: 1.5rem;
 }
 
