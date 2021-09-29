@@ -27,3 +27,25 @@ function topFunction() {
     },
         'slow');
 }
+
+
+
+var hovering = false;
+
+$('#top-bar-profile-picture, #expand-profile-info').mouseenter(function() {
+    hovering = true;
+    checkProfilePopupVisibility();
+});
+
+$('#container-around-top-bar').mouseleave(function() {
+    hovering = false;
+    checkProfilePopupVisibility();
+});
+
+function checkProfilePopupVisibility() {
+    if (hovering) {
+        $('.profile-info-popup').css("display", "flex");
+    } else {
+        $('.profile-info-popup').css("display", "none");
+    }
+}
