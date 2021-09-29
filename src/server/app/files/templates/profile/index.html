@@ -34,12 +34,15 @@
 
     <script>
 
+
+
+
         if ("{{ newLogIn }}") {
             setAccessToken("{{ access }}");
             setRefreshToken("{{ refresh }}");
 
-             sendRequestToServer({ type: "GET", url: "/authentication/get-token " }).then(data => {
-                 console.log(data);
+            sendRequestToServer({ type: "GET", url: "/authentication/get-token " }).then(data => {
+                console.log(data);
             });
         }
 
@@ -48,6 +51,10 @@
 </head>
 
 <body>
+
+    <div class="scroll-button">
+        <p>Top</p>
+    </div>
 
     <div class="top-bar">
 
@@ -73,8 +80,9 @@
 
         <div id="top-bar-right-section">
             <ion-icon name="search-outline" class="top-bar-icon"></ion-icon>
-            <ion-icon name="bookmark-outline" class="top-bar-icon"></ion-icon>
-            <ion-icon name="people-outline" class="top-bar-icon"></ion-icon>
+            <ion-icon name="people-outline" class="top-bar-icon">
+
+            </ion-icon>
             <ion-icon name="notifications-outline" class="top-bar-icon"></ion-icon>
 
             <div class="become-middleman-button">
@@ -140,28 +148,18 @@
 
             <div class="section-group-sections">
                 <div class="section-group-item active">
-                    <p>Overview</p>
+                    <p>Summary</p>
                 </div>
 
                 <div class="section-group-item ">
-                    <p>Groups</p>
+                    <p>Product Categories</p>
                 </div>
 
                 <div class="section-group-item ">
-                    <p>Posts</p>
+                    <p>Reviews</p>
                 </div>
 
-                <div class="section-group-item ">
-                    <p>Pages</p>
-                </div>
 
-                <div class="section-group-item ">
-                    <p>Events</p>
-                </div>
-
-                <div class="section-group-item ">
-                    <p>More</p>
-                </div>
             </div>
 
             <div class="section-about-me">
@@ -184,8 +182,8 @@
                     </div>
                 </div>
 
-                
-                
+
+
                 <div class="product-group-item-container">
 
                     <div class="product-group-item">
@@ -197,7 +195,7 @@
                             <p>300 Trades</p>
                         </div>
                     </div>
-    
+
                     <div class="product-group-item">
                         <div class="product-group-banner">
                             <ion-icon name="american-football-outline"></ion-icon>
@@ -216,7 +214,7 @@
                             <p>300 Trades</p>
                         </div>
                     </div>
-    
+
                     <div class="product-group-item">
                         <div class="product-group-banner">
                             <ion-icon name="american-football-outline"></ion-icon>
@@ -226,7 +224,7 @@
                             <p>300 Trades</p>
                         </div>
                     </div>
-    
+
                     <div class="product-group-item">
                         <div class="product-group-banner">
                             <ion-icon name="american-football-outline"></ion-icon>
@@ -238,11 +236,11 @@
                     </div>
                 </div>
 
-                
-            </div>
-            
 
-            <div class="section-about-me">
+            </div>
+
+
+            <div class="section-about-me" id="reviews-section">
                 <div class="top-section-about-me">
                     <p>Reviews</p>
                     <div class="edit-button-about-me" style="background: white;">
@@ -271,7 +269,9 @@
                         <p>3 months ago</p>
                     </div>
                     <div class="review-text">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, eius numquam rem omnis in voluptas iste repellendus blanditiis? At quaerat eius accusamus alias obcaecati aut dolores nemo nostrum reprehenderit similique!</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, eius numquam rem omnis in
+                            voluptas iste repellendus blanditiis? At quaerat eius accusamus alias obcaecati aut dolores
+                            nemo nostrum reprehenderit similique!</p>
                     </div>
 
                     <p class="answer-review">
@@ -299,7 +299,9 @@
                         <p>3 months ago</p>
                     </div>
                     <div class="review-text">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, eius numquam rem omnis in voluptas iste repellendus blanditiis? At quaerat eius accusamus alias obcaecati aut dolores nemo nostrum reprehenderit similique!</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, eius numquam rem omnis in
+                            voluptas iste repellendus blanditiis? At quaerat eius accusamus alias obcaecati aut dolores
+                            nemo nostrum reprehenderit similique!</p>
                     </div>
 
                     <p class="answer-review">
@@ -373,15 +375,7 @@
                 </div>
 
 
-                <div class="additional-info-item">
-                    <ion-icon name="book" class="additional-info-icon"></ion-icon>
-                    <div>
-                        <p>Curriculum vitae</p>
-                        <a href="#">
-                            <p>View</p>
-                        </a>
-                    </div>
-                </div>
+
 
             </div>
 
