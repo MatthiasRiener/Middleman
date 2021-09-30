@@ -1,4 +1,14 @@
+$(window).scroll(function(){
+    var scrollPos = $(document).scrollTop();
+    var topBarheight = $('.top-bar').height();
+    console.log(scrollPos, topBarheight);
 
+    if (scrollPos > topBarheight) {
+        $('.scroll-button').css("display", "flex");
+    } else {
+        $('.scroll-button').css("display", "none");
+    }
+});
 
 
 $('.section-group-item').click(function () {
