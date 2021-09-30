@@ -373,7 +373,7 @@ p {
 }
 
 .basic-info-top-left>p:nth-child(2) {
-    font-size: 1.2rem;
+    font-size: 1.05rem;
     color: #ff6e71;
     font-weight: 500;
 }
@@ -654,4 +654,19 @@ p {
     font-weight: 500;
     font-size: .85rem;
     color: #767989;
+}
+
+
+
+.profile-settings-tab {
+    width: 100%;
+    height: 100%;
+    z-index: 300;
+    position: absolute;
+    background: rgb(250, 250, 250);
+    top: 0;
+    left: 0;  
+    display: none;
+    flex-direction: row;
+    
 }
