@@ -1,4 +1,12 @@
-
+$(window).scroll(function(){
+    var scrollPos = $(document).scrollTop();
+    var topBarheight = $('.top-bar').height();
+    if (scrollPos > topBarheight) {
+        $('.scroll-button').css("display", "flex");
+    } else {
+        $('.scroll-button').css("display", "none");
+    }
+});
 
 
 $('.section-group-item').click(function () {
@@ -49,3 +57,5 @@ function checkProfilePopupVisibility() {
         $('.profile-info-popup').css("display", "none");
     }
 }
+
+

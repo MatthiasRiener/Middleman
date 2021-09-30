@@ -43,8 +43,27 @@ p {
     display: flex;
     align-items: center;
     position: fixed;
-    z-index: 2;
+    z-index: 200;
     background: white;
+}
+
+.top-bar-notification {
+    height: 8vh;
+    display: flex;
+    align-items: center;
+
+    position: relative;
+}
+
+.notification-top-bar-new {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    position: absolute;
+    background: #ff6e71;
+    right: 1vw;
+    top: 2vh;
+    transform: translate(70%, 60%);
 }
 
 .top-bar-logo {
@@ -112,8 +131,6 @@ p {
 
 .profile-info-popup {
     position: absolute;
-    width: 15vw;
-    height: auto;
     background: white;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     transform: translate(-40%, 15%);
@@ -124,6 +141,7 @@ p {
     box-sizing: border-box;
 
     border-radius: 10px;
+    
 }
 
 .profile-info-popup-item {
@@ -137,6 +155,9 @@ p {
     font-size: 1rem;
 
     cursor: pointer;
+
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 .profile-info-popup-item:hover {
@@ -181,7 +202,7 @@ p {
 .change-banner-image-button {
     display: flex;
     background: white;
-    color: black;
+    color: #333333;
     align-items: center;
     position: absolute;
     right: 1vw;
@@ -190,6 +211,7 @@ p {
     border-radius: 4px;
     font-weight: bold;
     cursor: pointer;
+    font-size: 1.4rem;
 }
 
 .profile-image-banner-section {
@@ -351,9 +373,9 @@ p {
 }
 
 .basic-info-top-left>p:nth-child(2) {
-    font-size: 1.1rem;
-    color: #838383;
-    font-weight: 400;
+    font-size: 1.05rem;
+    color: #ff6e71;
+    font-weight: 500;
 }
 
 .basic-info-edit-profile {
@@ -604,13 +626,15 @@ p {
 .product-group-banner {
     width: 3vw;
     height: 3vw;
-    background: #f8f7fc;
+    background: white;
     border-radius: 6px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 3px solid #383838;
+    border: 2px solid #383838;
     font-size: 1.5rem;
+
+    color: #383838;
 }
 
 .product-group-details-container {
@@ -630,4 +654,19 @@ p {
     font-weight: 500;
     font-size: .85rem;
     color: #767989;
+}
+
+
+
+.profile-settings-tab {
+    width: 100%;
+    height: 100%;
+    z-index: 300;
+    position: absolute;
+    background: rgb(250, 250, 250);
+    top: 0;
+    left: 0;  
+    display: none;
+    flex-direction: row;
+    
 }

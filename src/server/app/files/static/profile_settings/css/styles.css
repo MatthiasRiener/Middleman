@@ -1,0 +1,304 @@
+::-webkit-scrollbar {
+    width: 6px;
+    background: #e4e4e4;
+    
+}
+
+::-webkit-scrollbar-thumb {
+    background: #383838; 
+  }
+.main-content-settings {
+    height: auto;
+    width: 45vw;
+    padding: 8vh 2vw;
+    box-sizing: border-box;
+    background: white;
+    flex-grow: 1;
+}
+
+.sidebar-settings {
+    margin-left: 15vw;
+    background: rgb(250, 250, 250);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.sidebar-settings-container {
+    width: auto;
+    padding-top: 7vh;
+    box-sizing: border-box;
+    padding-right: .8vw;
+    padding-left: .8vw;
+}
+
+.sidebar-settings-title {
+    text-transform: uppercase;
+    font-weight: 550;
+}
+
+.sidebar-settings-item {
+    padding: .15vw 0vw;
+    margin-top: .3vh;
+    cursor: pointer;
+    text-overflow: ellipsis;
+    font-size: 1rem;
+    padding-left: .2vw;
+    box-sizing: border-box;
+    border-radius: 6px;
+}
+
+.sidebar-settings-item:hover {
+    font-weight: 500;
+    background: rgb(235, 235, 235);
+}
+
+.sidebar-settings-socialmedia {
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+.sidebar-app-information {
+    font-size: .75rem;
+}
+
+.sidebar-settings-spacer {
+    width: 60%;
+    height: 1px;
+    background: grey;
+    margin: 2vh 0vh;
+}
+
+.escape-button-settings {
+    margin: 7vh 1vw;
+    margin-right: 15vw;
+    display: flex;
+    flex-direction: column;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.escape-button-settings>.escape-button-settings-circle {
+    width: 1.5vw;
+    height: 1.5vw;
+    border-radius: 50%;
+    border: 2px solid #383838;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all ease-in 400ms;
+}
+
+.escape-button-settings>.escape-button-settings-circle:hover {
+    background: rgb(247, 247, 247);
+    font-size: 1.4rem;
+}
+
+.top-bar-logo-settings {
+    width: 2.4vw;
+    height: 2.4vw;
+    background-image: url("/static/profile/img/logo_topbar.png");
+    background-size: cover;
+    background-position: center;
+    margin-right: 1vw;
+    border-radius: 8px;
+    transform: translateX(-20%);
+    margin-bottom: 1.5vw;
+}
+
+.main-content-settings-title {
+    width: 100%;
+    font-size: 1.3rem;
+    font-weight: 520;
+    margin-bottom: 2vh;
+}
+
+.section-mein-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-container-settings {
+    width: 100%;
+    background: rgb(245, 245, 245);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 1vw;
+}
+
+.profile-container-top-banner-settings {
+    width: 100%;
+    height: 25vh;
+    border-radius: 10px 10px 0px 0px;
+    background-image: url("https://wallpaperaccess.com/full/14259.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.profile-container-top-banner-settings-image {
+    width: 7vw;
+    height: 7vw;
+    border-radius: 50%;
+    background-image: url("https://www.alucoildesign.com/assets/pages/media/profile/profile_user.jpg");
+    background-size: cover;
+    background-position: center;
+    border: 3px solid rgb(245, 245, 245);
+    transform: translate(20%, 50%);
+}
+
+.change-person-setting-section>p:nth-child(2) {
+    font-size: .9rem;
+}
+
+.profile-container-top-banner-infos-settings {
+    width: 100%;
+    height: 5vh;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.profile-container-settings-info {
+    height: 100%;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.username-settings-icon {
+    margin-left: 1vw;
+    font-size: 1.4rem;
+}
+
+.profile-container-settings-info>p {
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+.profile-container-settings-info-edit {
+    margin-left: auto;
+    margin-right: 1vw;
+    background: #383838;
+    padding: .3vw .5vw;
+    font-size: .90rem;
+    color: white;
+    font-weight: 500;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.profile-settings-information-container {
+    width: 92%;
+    background: rgb(230, 230, 230);
+    border-radius: 10px;
+    margin-top: 5vh;
+    padding: .4vw;
+}
+
+.profile-info-item-settings {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 1vh;
+    margin-bottom: .6vh;
+}
+
+.profile-info-item-settings>div:nth-child(1) {
+    height: 100%;
+    margin-left: .5vw;
+}
+
+.profile-info-item-settings>div:nth-child(1)>p:nth-child(1) {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: .9rem;
+    color: #383838;
+}
+
+.profile-info-item-settings>div:nth-child(1)>p:nth-child(2) {
+    font-size: .95rem;
+}
+
+
+.main-content-settings-over {
+    display: flex;
+    flex-grow: 1;
+    overflow-y: auto;
+    background: white;
+    padding-bottom: 8vh !important;
+    
+
+}
+
+
+.profile-info-item-settings>div:nth-child(2) {
+    margin-left: auto;
+    margin-right: 1vw;
+    background: #383838;
+    padding: .35vw .6vw;
+    font-size: .85rem;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.section-settings-spacer {
+    width: 100%;
+    height: 1px;
+    background: #383838;
+    margin: 5vh 0vh;
+}
+
+.profile-settings-button {
+    background: #383838;
+    padding: .35vw .6vw;
+    font-size: .95rem;
+    font-weight: 500;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    width: fit-content;
+    margin: 2vh 0vh;
+}
+
+.active-settings-item {
+    background: #383838 !important;
+    color: white;
+    font-weight: 500;
+}
+
+.two-factor-container {
+    width: 85%;
+}
+
+.two-factor-title {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: .95rem;
+}
+
+.two-factor-container>p:nth-child(2) {
+    font-size: .9rem;
+}
+
+.delete-or-deactive-container>div {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+}
+
+.delete-or-deactive-container>div>div:nth-child(2) {
+    margin-left: 1vw;
+    border: 2px solid #383838;
+    background: transparent;
+    color: #383838;
+}
