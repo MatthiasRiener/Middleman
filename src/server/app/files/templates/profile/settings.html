@@ -26,7 +26,7 @@
                 Benutzereinstellungen
             </p>
 
-            <div class="sidebar-settings-item active-settings-item">
+            <div class="sidebar-settings-item active-settings-item" id="sidebar-item-my-account">
                 <p>Mein Account</p>
             </div>
             <div class="sidebar-settings-item">
@@ -64,6 +64,10 @@
                 <p>Zahlungsabwicklung</p>
             </div>
 
+            <div class="sidebar-settings-item" id="refresh-token-test">
+                <p>Refresh</p>
+            </div>
+
             <div class="sidebar-settings-spacer"></div>
 
             <div class="sidebar-settings-item" id="logout-settings-page">
@@ -92,95 +96,97 @@
             <div class="main-content-settings-title" id="section-title-settings">
                 <p>Mein Account</p>
             </div>
-
-            <div class="section-mein-account">
-                <div class="profile-container-settings">
-                    <div class="profile-container-top-banner-settings">
-                        <div class="profile-container-top-banner-settings-image"></div>
-                    </div>
-                    <div class="profile-container-top-banner-infos-settings">
-                        <div class="profile-container-settings-info">
-                            <p>Assaf Rappaport</p>
-                            <ion-icon name="ellipsis-horizontal-outline" class="username-settings-icon"></ion-icon>
-                            <div class="profile-container-settings-info-edit">
-                                <p>Edit Profile</p>
-                            </div>
+            <div class="section-container-settings">
+                <div class="section-my-account">
+                    <div class="profile-container-settings">
+                        <div class="profile-container-top-banner-settings">
+                            <div class="profile-container-top-banner-settings-image"></div>
                         </div>
-
-
-                    </div>
-
-                    <div class="profile-settings-information-container">
-                        <div class="profile-info-item-settings">
-                            <div>
-                                <p>Benutername</p>
-                                <p>Matts#3596</p>
+                        <div class="profile-container-top-banner-infos-settings">
+                            <div class="profile-container-settings-info">
+                                <p>Assaf Rappaport</p>
+                                <ion-icon name="ellipsis-horizontal-outline" class="username-settings-icon"></ion-icon>
+                                <div class="profile-container-settings-info-edit">
+                                    <p>Edit Profile</p>
+                                </div>
                             </div>
-
-                            <div>
-                                <p>Bearbeiten</p>
-                            </div>
+    
+    
                         </div>
-
-                        <div class="profile-info-item-settings">
-                            <div>
-                                <p>E-mail</p>
-                                <p>riener.matts@mail.com</p>
+    
+                        <div class="profile-settings-information-container">
+                            <div class="profile-info-item-settings">
+                                <div>
+                                    <p>Benutername</p>
+                                    <p>Matts#3596</p>
+                                </div>
+    
+                                <div>
+                                    <p>Bearbeiten</p>
+                                </div>
                             </div>
-
-                            <div>
-                                <p>Bearbeiten</p>
+    
+                            <div class="profile-info-item-settings">
+                                <div>
+                                    <p>E-mail</p>
+                                    <p>riener.matts@mail.com</p>
+                                </div>
+    
+                                <div>
+                                    <p>Bearbeiten</p>
+                                </div>
                             </div>
+    
+                            <div class="profile-info-item-settings">
+                                <div>
+                                    <p>Telefonnummer</p>
+                                    <p>Du hast noch keine Telefonnummer hinzugefügt.</p>
+                                </div>
+    
+                                <div>
+                                    <p>Hinzufügen</p>
+                                </div>
+                            </div>
+    
                         </div>
-
-                        <div class="profile-info-item-settings">
-                            <div>
-                                <p>Telefonnummer</p>
-                                <p>Du hast noch keine Telefonnummer hinzugefügt.</p>
-                            </div>
-
-                            <div>
-                                <p>Hinzufügen</p>
-                            </div>
+                    </div>
+    
+                    <div class="section-settings-spacer"></div>
+    
+    
+                    <div class="change-person-setting-section">
+                        <div class="main-content-settings-title">
+                            <p>Passwort ändern</p>
                         </div>
-
-                    </div>
-                </div>
-
-                <div class="section-settings-spacer"></div>
-
-
-                <div class="change-person-setting-section">
-                    <div class="main-content-settings-title">
-                        <p>Passwort ändern</p>
-                    </div>
-                    <p>Wenn du dein Passwort ändern möchtest, kannst du dies hier machen.</p>
-
-                    <div class="profile-settings-button">
-                        <p>Passwort ändern</p>
-                    </div>
-                </div>
-
-
-                <div class="section-settings-spacer"></div>
-
-                <div class="delete-or-deactive-container">
-                    <p class="two-factor-title">Account löschen</p>
-                    <div>
-
+                        <p>Wenn du dein Passwort ändern möchtest, kannst du dies hier machen.</p>
+    
                         <div class="profile-settings-button">
-                            <p>Account deaktivieren</p>
+                            <p>Passwort ändern</p>
                         </div>
-                        <div class="profile-settings-button">
-                            <p>Account löschen</p>
-                        </div>
-
                     </div>
-
-
+    
+    
+                    <div class="section-settings-spacer"></div>
+    
+                    <div class="delete-or-deactive-container">
+                        <p class="two-factor-title">Account löschen</p>
+                        <div>
+    
+                            <div class="profile-settings-button">
+                                <p>Account deaktivieren</p>
+                            </div>
+                            <div class="profile-settings-button">
+                                <p>Account löschen</p>
+                            </div>
+    
+                        </div>
+    
+    
+                    </div>
+    
                 </div>
-
             </div>
+            
         </div>
         <div class="escape-button-settings">
             <div class="escape-button-settings-circle" id="escape-button-settings">
