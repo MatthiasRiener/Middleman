@@ -31,7 +31,6 @@ def login():
     user_mail = user_credentials.get('email')
 
     # user in db
-
     redirect = render_template('profile/index.html',
                                access=encrypted_acc, refresh=encrypted_ref, newLogIn=True)
 
@@ -40,33 +39,29 @@ def login():
 
 @authentication_page.route('/log-out', methods=["GET"])
 @jwt_token_decrypted
-def logout():
+def logout(refresh_token):
     user_credentials = oidc.user_getinfo(
         ['preferred_username'])
 
     user_name = user_credentials.get('preferred_username')
 
-    refresh_token = getRefreshToken(request)
-
     auth_service.logout(refresh_token)
     oidc.logout()
 
+    print(user_name)
     return "User " + user_name + " logged out"
 
 
-@authentication_page.route('/refresh', methods=["GET"])
+@authentication_page.route('/refresh-token', methods=["GET"])
 @jwt_token_decrypted
-def is_active():
-    refresh_token = getRefreshToken(request)
-
-    print(refresh_token)
+def is_active(refresh_token):
     return auth_service.refresh(refresh_token)
 
 
 @authentication_page.route('/get-token', methods=["GET"])
 @jwt_token_decrypted
 def isTest(token):
-    return token  # auth_service.encrypted_token -> worked
+    return str(auth_service.is_token_active('hättst wohl gern'))
 
 
 @authentication_page.route('/get', methods=["GET"])

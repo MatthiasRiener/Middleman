@@ -46,10 +46,7 @@
         if ("{{ newLogIn }}") {
             setAccessToken("{{ access }}");
             setRefreshToken("{{ refresh }}");
-
-            sendRequestToServer({ type: "GET", url: "/authentication/get-token " }).then(data => {
-                console.log(data);
-            });
+            console.log("new login")
         }
 
     </script>
