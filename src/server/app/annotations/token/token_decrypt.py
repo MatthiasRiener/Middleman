@@ -1,4 +1,5 @@
-from flask import request
+import flask
+from flask import request, render_template
 from app.endpoints.authentication.auth_service import AuthService
 
 from setup import fernet
@@ -16,7 +17,7 @@ def jwt_token_decrypted(func):  # TODO: change name
         if verify_token(result) or func.__name__ == "logout":
             return func(result)
 
-        return 401
+        return flask.Response(status=401)
     wrapper.__name__ = func.__name__
     return wrapper
 

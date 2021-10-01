@@ -52,10 +52,14 @@ def logout(refresh_token):
     return "User " + user_name + " logged out"
 
 
-@authentication_page.route('/refresh-token', methods=["GET"])
+@authentication_page.route('/refresh-token', methods=["POST"])
 @jwt_token_decrypted
 def is_active(refresh_token):
-    return auth_service.refresh(refresh_token)
+    new_access_token, new_refresh_token = auth_service.refresh(refresh_token)
+    return {
+        "access": new_access_token,
+        "refresh": new_refresh_token
+    }
 
 
 @authentication_page.route('/get-token', methods=["GET"])

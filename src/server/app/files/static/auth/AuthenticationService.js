@@ -42,7 +42,7 @@ function silentLogin(callback, args, resolve, reject) {
     console.log("RFRESH DU DUMME HURENMUTTER")
     $.ajax({
         type: "POST",
-        url: baseURL + "/authentication/refresh_token",
+        url: baseURL + "/authentication/refresh-token",
         headers: {
             Authorization: "Bearer " + getRefreshToken(),
         },
