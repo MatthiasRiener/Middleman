@@ -25,7 +25,7 @@ function ajaxRequest(resolve, reject, args) {
                 alert("400 status code! user error");
             },
             401: function () {
-                silentLogin(getRefreshToken(), sendRequestToServer, args, resolve, reject);
+                silentLogin(sendRequestToServer, args, resolve, reject);
             },
             801: function () {
                 console.log("801 Fehler.")
