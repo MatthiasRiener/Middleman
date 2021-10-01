@@ -63,7 +63,13 @@ function silentLogin(callback, args, resolve, reject) {
     });
 }
 
-
+function logOut() {
+    sendRequestToServer({ type: "GET", url: "/authentication/log-out " }).then(data => {
+        setAccessToken(null);
+        setRefreshToken(null);
+        window.location.href = "www.duretard.at";
+    });
+}
 
 function setAccessToken(access) {
     if (!checkToken(access)) {

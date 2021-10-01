@@ -59,3 +59,8 @@ function checkProfilePopupVisibility() {
 }
 
 
+
+
+$('body').on('click', '#logout-top-bar', function () {
+    logOut();
+});
