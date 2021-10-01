@@ -9,15 +9,15 @@ authService = AuthService()
 def jwt_token_decrypted(func):  # TODO: change name
     def wrapper():  # maybe change to token only
         token = read_token_from_request()
-        print("token " + token)
-        # result = fernet.decrypt(bytes(token, encoding='utf8'))
-        result = token.removeprefix('a')
+        result = fernet.decrypt(bytes(token, encoding="ascii"))
+        # result = token.removeprefix('a')
 
-        print(result)
+        try:
+            if verify_token(result):
+                return func(result)
+        except:
+            return 500
 
-        if verify_token(result):
-            return func(result)
-        # wenn token irgendwas ist nicht 401 returnen problem im frontend -> refresh-loop etc.
         return 401
     wrapper.__name__ = func.__name__
     return wrapper
@@ -26,12 +26,12 @@ def jwt_token_decrypted(func):  # TODO: change name
 def read_token_from_request():
     encrypted_token = request.headers.get('Authorization')\
         .removeprefix('Bearer ')  # remove prefix of access / refresh token
-    return encrypted_token
+
+    return encrypted_token.replace("&#39", "'")
 
 
 def verify_token(token):
     return authService.is_token_active(token)
-
 
 
 # check if jwt token is in header -> DONE

@@ -6,12 +6,12 @@ def jwt_token_encrypted(func):
         access_token = args[1] or "abc"
         if access_token == "abc":
             raise Exception("Access Token is null")
-        acc_result = "a" + access_token  # fernet.encrypt(access_token.encode())
+        acc_result = fernet.encrypt(bytes(access_token, encoding='ascii')).decode()
 
         refresh_token = args[2] or "abc"
         if refresh_token == "abc":
             raise Exception("Refresh Token is null")
-        ref_result = "a" + refresh_token  # fernet.encrypt(refresh_token.encode())
+        ref_result = fernet.encrypt(refresh_token.encode(encoding='ascii')).decode()
 
         return acc_result, ref_result
     wrapper.__name__ = func.__name__

@@ -5,6 +5,7 @@ import json
 from app.annotations.token.token_encrypt import jwt_token_encrypted
 
 
+
 def getPrefix():
     return "Bearer "
 
