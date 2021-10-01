@@ -13,7 +13,6 @@ function sendRequestToServer(args) {
 
 
 function ajaxRequest(resolve, reject, args) {
-    console.log(getAccessToken())
     $.ajax({
         type: args.type,
         url: baseURL + args.url,
@@ -42,7 +41,7 @@ function silentLogin(callback, args, resolve, reject) {
     console.log("RFRESH DU DUMME HURENMUTTER")
     $.ajax({
         type: "POST",
-        url: baseURL + "/authentication/refresh_token",
+        url: baseURL + "/authentication/refresh-token",
         headers: {
             Authorization: "Bearer " + getRefreshToken(),
         },
@@ -58,7 +57,8 @@ function silentLogin(callback, args, resolve, reject) {
             args["isCallback"] = true;
             args['resolve'] = resolve;
             args['reject'] = reject;
-            setAccessToken(data);
+            setAccessToken(data.access);
+            setRefreshToken(data.refresh);
             callback(args);
         },
     });
