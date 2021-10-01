@@ -18,20 +18,21 @@ $('body').on('click', '#logout-settings-page', function () {
 
 
 $('body').on('click', '.sidebar-settings-item', function () {
+
+
+    $('.sidebar-settings-item').removeClass("active-settings-item");
+    $(this).addClass("active-settings-item");
+
     var el = $(this);
     var id = el[0].id.replace('sidebar-item-', '');
 
-    var text = el.children('p').eq(0).text();
+    var text = el[0].innerText;
 
     $('#section-title-settings > p').text(text);
     $('.section-container-settings > div').css("display", "none");
     $('.section-' + id).css("display", "block");
+
+    console.log(el)
 });
 
 
-$('body').on('click', '#refresh-token-test', function () {
-    sendRequestToServer({ type: 'GET', url: '/authentication/get-token' }).then(data => {
-        console.log("RESPOINSE FONDNSANDASND");
-        console.log(data)
-    });
-})
