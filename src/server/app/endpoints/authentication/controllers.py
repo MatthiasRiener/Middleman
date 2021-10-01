@@ -37,7 +37,7 @@ def login():
     return redirect
 
 
-@authentication_page.route('/log-out', methods=["POST"])
+@authentication_page.route('/log-out', methods=["GET"])
 @jwt_token_decrypted
 def logout(refresh_token):
     user_credentials = oidc.user_getinfo(
@@ -48,6 +48,7 @@ def logout(refresh_token):
     auth_service.logout(refresh_token)
     oidc.logout()
 
+    print(user_name)
     return "User " + user_name + " logged out"
 
 
@@ -58,7 +59,8 @@ def is_active(refresh_token):
 
 
 @authentication_page.route('/get-token', methods=["GET"])
-def isTest():
+@jwt_token_decrypted
+def isTest(token):
     return str(auth_service.is_token_active('hättst wohl gern'))
 
 
