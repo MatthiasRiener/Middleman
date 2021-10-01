@@ -1,9 +1,5 @@
+from ...annotations.token.token_encrypt import jwt_token_encrypted
 from keycloak import KeycloakOpenID
-from datetime import datetime
-import json
-
-from app.annotations.token.token_encrypt import jwt_token_encrypted
-
 
 
 def getPrefix():
@@ -21,7 +17,7 @@ class AuthService:
         self.configure()
 
     def configure(self):
-        # data = json.load(self.f)
+        # data = json.load(self.f) TODO: no hardcode
         self.keycloak_openid.client_id = "python-middleman"  # data['web']['client_id']
         self.keycloak_openid.client_secret_key = "3edd528e-f080-4bb7-8023-de773324f5b8"  # data['web']['client_secret']
         # for future: use keyvaults for python etc.
@@ -34,10 +30,11 @@ class AuthService:
         self.keycloak_openid.logout(refresh_token)
         return "logged out"
 
+    def get_token_info(self, access_token):
+        return self.keycloak_openid.introspect(access_token)
+
     def is_token_active(self, access_token):
-        token_info = self.keycloak_openid.introspect(access_token)
-        # another check if refresh token is active
-        return token_info.get('active')
+        return self.get_token_info(access_token).get('active')
 
     def refresh(self, refresh_token):
         token = self.keycloak_openid.refresh_token(refresh_token)

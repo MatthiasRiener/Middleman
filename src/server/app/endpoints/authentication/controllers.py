@@ -1,15 +1,17 @@
-import json
+import datetime
+import time
 
-from flask import Flask, render_template, Blueprint, url_for, request
-# request.headers
+from flask import render_template, Blueprint
 
-from ...annotations.token.token_decrypt import jwt_token_decrypted, read_token_from_request
+from ..authentication.auth_service import AuthService
+from ...annotations.token.token_decrypt import jwt_token_decrypted
 from ...db.settings import oidc
-from ..authentication.auth_service import AuthService, getPrefix
+from ...repository.authentication_repository import AuthenticationRepository
 
 authentication_page = Blueprint("authentication", __name__)
 
 auth_service = AuthService()
+authentication_repo = AuthenticationRepository()
 
 
 # for future: use DI
@@ -23,14 +25,20 @@ def login():
 
     encrypted_acc, encrypted_ref = auth_service.encrypt_token(access_token, refresh_token)
 
-    user_credentials = oidc.user_getinfo(
-        ['preferred_username', 'email', 'sub', 'roles'])
+    token_info = auth_service.get_token_info(access_token)
 
-    user_id = user_credentials.get('sub')
-    user_name = user_credentials.get('preferred_username')
-    user_mail = user_credentials.get('email')
+    print('cool)')
 
-    # user in db
+    authentication_repo.createUser(
+        u_id=token_info.get('sub'),
+        username=token_info.get('preferred_username'),
+        surname=token_info.get('given_name'),
+        family_name=token_info.get('family_name'),
+        email=token_info.get('email'),
+        created=datetime.datetime.now(),
+        last_login=datetime.datetime.now()
+    )
+
     redirect = render_template('profile/index.html',
                                access=encrypted_acc, refresh=encrypted_ref, newLogIn=True)
 
@@ -60,20 +68,3 @@ def is_active(refresh_token):
         "access": new_access_token,
         "refresh": new_refresh_token
     }
-
-
-@authentication_page.route('/get-token', methods=["GET"])
-@jwt_token_decrypted
-def isTest(token):
-    return str(auth_service.is_token_active('hättst wohl gern'))
-
-
-@authentication_page.route('/get', methods=["GET"])
-@jwt_token_decrypted
-def isTest2():
-    return "dsahi"  # auth_service.encrypted_token -> worked
-
-
-def getRefreshToken(http_request):
-    return http_request.headers.get('Authorization') \
-        .removeprefix(getPrefix())
