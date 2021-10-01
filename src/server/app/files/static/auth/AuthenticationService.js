@@ -19,7 +19,7 @@ function ajaxRequest(resolve, reject, args) {
         url: baseURL + args.url,
         data: args.data == undefined ? {} : args.data,
         headers: {
-            Authorization: "Bearer " + args.url == '/authentication/log-out' ? getRefreshToken() :getAccessToken(),
+            Authorization: args.url == '/authentication/log-out' ? "Bearer " + getRefreshToken() : "Bearer " + getAccessToken(),
         },
         statusCode: {
             400: function () {
@@ -65,7 +65,7 @@ function silentLogin(callback, args, resolve, reject) {
 }
 
 function logOut() {
-    sendRequestToServer({ type: "GET", url: "/authentication/log-out"}).then(data => {
+    sendRequestToServer({ type: "GET", url: "/authentication/log-out" }).then(data => {
         setAccessToken(null);
         setRefreshToken(null);
         window.location.href = "www.duretard.at";
