@@ -13,7 +13,7 @@ function sendRequestToServer(args) {
 
 
 function ajaxRequest(resolve, reject, args) {
-    console.log(getAccessToken())
+    console.log(args.url)
     $.ajax({
         type: args.type,
         url: baseURL + args.url,
