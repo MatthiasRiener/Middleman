@@ -3,6 +3,10 @@
 $('#profile-settings-edit').click(function() {
     loadSettingsFile();
 })
+
+loadSettingsFile();
+
+
 function loadSettingsFile() {
     
     $(".profile-settings-tab").load("/profile/settings");
