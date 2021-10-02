@@ -11,8 +11,6 @@ from ...repository.authentication_repository import AuthenticationRepository
 authentication_page = Blueprint("authentication", __name__)
 
 auth_service = AuthService()
-authentication_repo = AuthenticationRepository()
-
 
 # for future: use DI
 
@@ -27,9 +25,7 @@ def login():
 
     token_info = auth_service.get_token_info(access_token)
 
-    print('cool)')
-
-    authentication_repo.createUser(
+    user = AuthenticationRepository.createUser(
         u_id=token_info.get('sub'),
         username=token_info.get('preferred_username'),
         surname=token_info.get('given_name'),
@@ -39,7 +35,7 @@ def login():
         last_login=datetime.datetime.now()
     )
 
-    redirect = render_template('profile/index.html',
+    redirect = render_template('profile/index.html', user=user,
                                access=encrypted_acc, refresh=encrypted_ref, newLogIn=True)
 
     return redirect
