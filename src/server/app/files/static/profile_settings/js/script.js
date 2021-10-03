@@ -36,3 +36,9 @@ $('body').on('click', '.sidebar-settings-item', function () {
 });
 
 
+$('body').on('click', '.questions-mark-container', function() {
+    var el = $(this).closest('.frequently-asked-question-item');
+    el.children('p').toggle();
+    $(this).toggleClass("question-open");
+});
+

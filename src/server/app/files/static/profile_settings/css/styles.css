@@ -1,15 +1,15 @@
 ::-webkit-scrollbar {
     width: 6px;
     background: #e4e4e4;
-    
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #383838; 
-  }
+    background: #000;
+}
+
 .main-content-settings {
     height: auto;
-    width: 45vw;
+    width: 50vw;
     padding: 8vh 2vw;
     box-sizing: border-box;
     background: white;
@@ -21,7 +21,6 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    
 }
 
 .sidebar-settings-container {
@@ -82,7 +81,7 @@
     width: 1.5vw;
     height: 1.5vw;
     border-radius: 50%;
-    border: 2px solid #383838;
+    border: 2px solid #000;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -113,6 +112,10 @@
     font-size: 1.3rem;
     font-weight: 520;
     margin-bottom: 2vh;
+}
+
+.section-container-settings > div:not(:first-child) {
+    display: none;
 }
 
 .section-mein-container {
@@ -187,7 +190,7 @@
 .profile-container-settings-info-edit {
     margin-left: auto;
     margin-right: 1vw;
-    background: #383838;
+    background: #000;
     padding: .3vw .5vw;
     font-size: .90rem;
     color: white;
@@ -221,13 +224,12 @@
     text-transform: uppercase;
     font-weight: 500;
     font-size: .9rem;
-    color: #383838;
+    color: #000;
 }
 
 .profile-info-item-settings>div:nth-child(1)>p:nth-child(2) {
     font-size: .95rem;
 }
-
 
 .main-content-settings-over {
     display: flex;
@@ -235,14 +237,12 @@
     background: white;
     padding-bottom: 8vh !important;
     flex-grow: 1;
-
 }
-
 
 .profile-info-item-settings>div:nth-child(2) {
     margin-left: auto;
     margin-right: 1vw;
-    background: #383838;
+    background: #000;
     padding: .35vw .6vw;
     font-size: .85rem;
     color: white;
@@ -253,12 +253,12 @@
 .section-settings-spacer {
     width: 100%;
     height: 1px;
-    background: #383838;
+    background: #000;
     margin: 5vh 0vh;
 }
 
 .profile-settings-button {
-    background: #383838;
+    background: #000;
     padding: .35vw .6vw;
     font-size: .95rem;
     font-weight: 500;
@@ -270,7 +270,7 @@
 }
 
 .active-settings-item {
-    background: #383838 !important;
+    background: #000 !important;
     color: white;
     font-weight: 500;
 }
@@ -297,32 +297,24 @@
 
 .delete-or-deactive-container>div>div:nth-child(2) {
     margin-left: 1vw;
-    border: 2px solid #383838;
+    border: 2px solid #000;
     background: transparent;
-    color: #383838;
+    color: #000;
 }
-
-
 
 .subscription-banner-settings {
     height: 45vh;
     background: #292b2f;
     border-radius: 10px;
-
     position: relative;
-
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 8vh;
-
+    margin-top: 2vh;
     background-image: url("https://images.unsplash.com/photo-1472566316349-bce77aa2a778?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80");
     background-size: cover;
     background-position: center;
-
     color: white;
-
-
 }
 
 .subscription-banner-title {
@@ -332,25 +324,22 @@
     font-weight: 600;
     padding: .5vw 1.2vw;
     margin-top: 8vh;
-
     border-radius: 10px;
 }
 
-.subscription-banner-settings > p:nth-of-type(1) {
+.subscription-banner-settings>p:nth-of-type(1) {
     font-size: 1.6rem;
 }
 
-.subscription-banner-settings > p:nth-of-type(2) {
+.subscription-banner-settings>p:nth-of-type(2) {
     font-weight: 500;
     width: 70%;
     text-align: center;
 }
 
-
 .section-my-subscriptions {
     padding-bottom: 8vh;
 }
-
 
 .subscription-settings-features-title {
     font-size: 1.4rem;
@@ -359,49 +348,27 @@
     font-weight: 500;
 }
 
-
-
-
 .subscription-item-feature-container {
     width: 100%;
-
     display: flex;
     flex-wrap: wrap;
 }
 
 .subscription-item-feature {
-    display: flex;
-    padding: 1vw 1vw;
-    background: #101113;
+    padding: 2vw 2vw;
     box-sizing: border-box;
     margin: .4vw;
-
     display: flex;
     flex-direction: column;
-
-    align-items: center;
-
     border-radius: 10px;
     width: 48%;
-}
-
-.subscription-item-title {
-  
-    text-align: center;
-
-    font-weight: 600;
-    font-size: 1.4rem;
-    margin: .8vh 0vh !important;
-
-    color: white;
-
+    background: #f9f9fb;
 }
 
 .subscription-button {
     display: flex;
     align-items: center;
     justify-content: center;
-
     padding: .4vw 1.2vw;
     background: white;
     color: black;
@@ -409,9 +376,207 @@
     border-radius: 5px;
 }
 
+.monthly-subscriptions-button {
+    color: white;
+    background: #000;
+    font-size: 1.2rem;
+    padding: .3vw .5vw;
+    border-radius: 6px;
+    align-self: flex-start;
+    margin-bottom: 3vh;
+}
 
-.subscription-item-desc {
-    color: #dfdfdf;
-    text-align: center;
+.subscription-feature-item-element {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    margin-bottom: 2vh !important;
+}
+
+.subscription-feature-item-element>p:nth-child(1) {
+    font-weight: 500;
     font-size: .95rem;
+}
+
+.subscription-feature-item-element>div:nth-child(2) {
+    background: #000;
+    border: 2px solid #000;
+    width: 1vw;
+    height: 1vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-left: auto;
+    color: white;
+    box-sizing: border-box;
+    font-size: 1.2rem;
+}
+
+.unticked {
+    background: transparent !important;
+    border: 2px solid #000 !important;
+    color: #000 !important;
+}
+
+.subscription-packages-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 1vw;
+    box-sizing: border-box;
+    background: white;
+    border-radius: 10px;
+    margin-bottom: 2vh;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 5px 29px 0px;
+}
+
+.selected-package {
+    background: black;
+}
+
+.subscription-package-check {
+    min-width: 1vw;
+    width: 1vw !important;
+    height: 1vw;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    font-size: 1.3rem;
+    border: 2px solid #97979749;
+}
+
+.selected-package>.subscription-package-check {
+    border: 2px solid white;
+    background: black;
+}
+
+.selected-package>.subscription-package-check>.package-checked {
+    width: 70%;
+    height: 70%;
+    background: white;
+    border-radius: 50%;
+}
+
+.subscription-package-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 1vw;
+}
+
+.subscription-package-info>p:nth-child(1) {
+    font-weight: 500;
+    font-size: 1.3rem;
+}
+
+.selected-package>.subscription-package-info>p:nth-child(1) {
+    color: white;
+}
+
+.subscription-package-monthly-deal {
+    background: #ffeef1;
+    align-self: flex-start;
+    padding: .1vw .3vw !important;
+    font-size: .9rem;
+    color: #d7a99c;
+    font-weight: 500;
+    border-radius: 7px;
+}
+
+.subscription-packages-item>p:nth-child(3) {
+    margin-left: auto !important;
+    font-size: 2.2rem;
+    font-weight: 600;
+    justify-self: center;
+}
+
+.selected-package > p:nth-child(3) {
+    color: white;
+}
+
+.subscription-packages-item>p:nth-child(3)>span {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.choose-plan-button {
+    font-weight: 500;
+    font-size: 1rem;
+    color: white;
+    background: #000;
+    border-radius: 10px;
+    align-self: center;
+    justify-self: flex-end;
+    padding: .6vw 1vw;
+    margin-left: auto;
+    margin-top: auto;
+    cursor: pointer;
+}
+
+
+.frquently-asked-questions-container {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.frequently-asked-question-item {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 2px solid #dadada49;
+    padding-bottom: 2vh;
+    margin-bottom: 2vh;
+}
+
+.frequently-asked-question-item > p {
+    width: calc(100% - 3vw);
+    align-self: flex-end;
+    font-size: .93rem;
+
+    display: none;
+}
+
+
+.frequently-asked-top-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.frequently-asked-top-container > p {
+    font-weight: 500;
+    font-size: 1.1rem;
+    margin-left: 1vw !important;
+}
+
+.question-open {
+
+    background: #000 !important;
+    color: white !important;
+    border-color: transparent !important;
+}
+
+.questions-mark-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 2vw;
+    height: 2vw;
+    border-radius: 50%;
+
+    background: #f9f9fb;
+    border: 2px solid #000;
+    color: #000;
+
+    font-size: 1.3rem;
+
+    box-sizing: border-box;
+    cursor: pointer;
 }
