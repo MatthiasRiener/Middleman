@@ -5,13 +5,15 @@ import flask
 from ..db.settings import db
 from ..models.user import User
 
+from ..repository.user_repository import UserRepository
+
 
 class AuthenticationRepository:
 
     def __init__(self):
         pass
 
-    def createUser(self, u_id, username, surname, family_name, email, created, last_login):
+    def createUser(u_id, username, surname, family_name, email, created, last_login):
         if u_id is None:
             raise Exception()
 
@@ -35,8 +37,12 @@ class AuthenticationRepository:
 
         user = User(u_id, username, surname, family_name, email, last_login, created)
 
-        user_in_db = db.db.users.find_one({'u_id': user.u_id})
+        user_in_db = getUserByUserId()
+
         if user_in_db is not None:
             db.db.users.update_one({'u_id': user.u_id}, {'$set': {'last_login': user.last_login}})
+
         else:
             db.db.users.insert_one(user.to_dict())
+
+        return user
