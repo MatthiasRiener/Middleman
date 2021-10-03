@@ -32,13 +32,20 @@ $('body').on('click', '.sidebar-settings-item', function () {
     $('.section-container-settings > div').css("display", "none");
     $('.section-' + id).css("display", "block");
 
-    console.log(el)
 });
 
 
-$('body').on('click', '.questions-mark-container', function() {
+$('body').on('click', '.questions-mark-container', function () {
     var el = $(this).closest('.frequently-asked-question-item');
     el.children('p').toggle();
     $(this).toggleClass("question-open");
 });
 
+
+$('body').on('click', '#sidebar-item-my-language', function () {
+    $('.my-language-item').each(function (index) {
+        var el = $(this)[0].id;
+        var imageUrl = `https://www.countryflags.io/${el}/flat/64.png`;
+        $(this).children(".flag-image").css('background-image', 'url(' + imageUrl + ')');
+    })
+});
