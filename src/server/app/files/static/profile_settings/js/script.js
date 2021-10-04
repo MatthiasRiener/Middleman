@@ -111,7 +111,7 @@ $('body').on('click', '.subscription-package-check', function () {
 })
 
 
-$('body').on('click', '#sidebar-item-my-subscriptions', function() {
+$('body').on('click', '#sidebar-item-my-subscriptions', function () {
     loadFeaturesById("free");
 });
 
@@ -138,3 +138,5 @@ function loadFeaturesById(id) {
 
     });
 }
+
+
