@@ -13,6 +13,8 @@
     padding: 8vh 2vw;
     box-sizing: border-box;
     background: white;
+
+
 }
 
 .sidebar-settings {
@@ -21,6 +23,8 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+
+
 }
 
 .sidebar-settings-container {
@@ -29,6 +33,8 @@
     box-sizing: border-box;
     padding-right: .8vw;
     padding-left: .8vw;
+
+   
 }
 
 .sidebar-settings-title {
@@ -37,7 +43,7 @@
 }
 
 .sidebar-settings-item {
-    padding: .15vw 0vw;
+    padding: .2vw .2vw;
     margin-top: .3vh;
     cursor: pointer;
     text-overflow: ellipsis;
@@ -45,10 +51,14 @@
     padding-left: .2vw;
     box-sizing: border-box;
     border-radius: 6px;
+
+    overflow: hidden;
+    white-space: nowrap;
+   
 }
 
 .sidebar-settings-item:hover {
-    font-weight: 500;
+    text-shadow: 0 0 .65px #333, 0 0 .65px #333;
     background: rgb(235, 235, 235);
 }
 
@@ -447,6 +457,8 @@
     background: white;
     font-size: 1.3rem;
     border: 2px solid #97979749;
+
+    cursor: pointer;
 }
 
 .selected-package>.subscription-package-check {
@@ -513,7 +525,7 @@
     justify-self: flex-end;
     padding: .6vw 1vw;
     margin-left: auto;
-    margin-top: auto;
+    margin-top: 2vh;
     cursor: pointer;
 }
 
@@ -551,7 +563,7 @@
 
 .frequently-asked-top-container > p {
     font-weight: 500;
-    font-size: 1.1rem;
+    font-size: 1.0rem;
     margin-left: 1vw !important;
 }
 
@@ -639,4 +651,127 @@
     border-radius: 8px;
 
     margin-left: 1vw;
+}
+
+
+.container-add-payment-method {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.add-payment-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.add-payment-info > p:nth-child(1) {
+    font-size: .85rem;
+    font-weight: 500;
+}
+
+.add-payment-info > p:nth-child(2) {
+    font-size: .8rem;
+}
+
+
+.add-payment-button {   
+    margin-left: auto;
+    border-radius: 5px;
+    padding: .6vw .9vw;
+    background: #000;
+    
+
+    color: white;
+    font-weight: 500;
+
+    font-size: .9rem;
+
+    cursor: pointer;
+}
+
+
+.transaction-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.transaction-container-header {
+    background: #f9f9fb;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0vw 2vw;
+
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+
+.transaction-container-header > div > p {
+    font-weight: 500;
+    padding: .7vw 0vw !important;
+}
+
+.transaction-container-header > div:nth-child(1) {
+    width: 30%;
+}
+
+
+.transaction-container-header > div:nth-child(2) {
+    width: 50%;
+}
+
+.transaction-container-header > div:nth-child(3) {
+    width: 20%;
+}
+
+
+.transaction-container-body {
+    border-top: 5px solid white;
+    background: #f9f9fb;
+
+}
+
+.transaction-container-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0vw 2vw;
+    cursor: pointer;
+}
+
+.transaction-container-item:not(:first-child) {
+    border-top: 2px solid #dadada49;
+
+}
+
+.transaction-container-item:hover {
+    background: #e3e5e8;
+}
+
+
+.transaction-container-item > div:nth-child(1) {
+    width: 30%;
+}
+
+
+.transaction-container-item > div:nth-child(2) {
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+
+.transaction-container-item > div:nth-child(2) > p {
+    padding: 0 .5vw !important;
+}
+
+.transaction-container-item > div:nth-child(3) {
+    width: 20%;
+}
+
+.transaction-container-item > div > p {
+    padding: .7vw 0vw !important;
 }

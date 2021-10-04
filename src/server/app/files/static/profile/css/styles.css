@@ -101,7 +101,7 @@ p {
 .become-middleman-button {
     display: flex;
     align-items: center;
-    background: #383838;
+    background: #000;
     border-radius: 5px;
     padding: 0.4vw;
     margin: 0 2vw;
@@ -124,7 +124,7 @@ p {
     background-image: url("https://www.alucoildesign.com/assets/pages/media/profile/profile_user.jpg");
     background-size: cover;
     background-position: center;
-    border: 2px solid #383838;
+    border: 2px solid #000;
     position: relative;
     cursor: pointer;
 }
@@ -342,7 +342,7 @@ p {
 }
 
 .additional-info-icon {
-    color: #383838;
+    color: #000;
     font-size: 1.4rem;
 }
 
@@ -384,7 +384,7 @@ p {
     margin-left: auto !important;
     height: auto;
     margin: 0.5vw;
-    background: #383838;
+    background: #000;
     color: white;
     padding: .2vw .5vw;
     border-radius: 4px;
@@ -526,7 +526,7 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #383838;
+    background: #000;
     padding: .3vw .5vw;
     margin-left: auto !important;
     color: white;
@@ -631,10 +631,10 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 2px solid #383838;
+    border: 2px solid #000;
     font-size: 1.5rem;
 
-    color: #383838;
+    color: #000;
 }
 
 .product-group-details-container {
