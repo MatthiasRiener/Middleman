@@ -140,3 +140,27 @@ function loadFeaturesById(id) {
 }
 
 
+$('body').on('click', '.my-language-item', function () {
+    $('.my-language-item').removeClass("language-selected");
+    $(this).addClass("language-selected");
+});
+
+
+
+$(document).on("mouseenter", ".profile-container-top-banner-settings-image", function (e) {
+    $(this).addClass("profile-is-hovering");
+});
+
+$(document).on("mouseleave", ".profile-container-top-banner-settings-image", function (e) {
+    $(this).removeClass("profile-is-hovering");
+});
+
+// profile-container-top-banner-settings
+
+$(document).on("mouseenter", ".profile-container-top-banner-settings", function (e) {
+    $(".banner-hover-container").addClass("banner-hovering-class");
+});
+
+$(document).on("mouseleave", ".profile-container-top-banner-settings", function (e) {
+    $(".banner-hover-container").removeClass("banner-hovering-class");
+});
