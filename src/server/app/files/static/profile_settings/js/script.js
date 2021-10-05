@@ -99,12 +99,12 @@ var options = {
 
 
 
-$('body').on('click', '.subscription-package-check', function () {
+$('body').on('click', '.subscription-packages-item', function () {
     var el = $(this);
     $('.subscription-packages-item').removeClass("selected-package");
-    el.closest(".subscription-packages-item").addClass("selected-package");
+    $(this).addClass("selected-package");
 
-    var id = el.closest(".subscription-packages-item")[0].id.replace('-package', '');
+    var id = $(this)[0].id.replace('-package', '');
 
     loadFeaturesById(id);
 
