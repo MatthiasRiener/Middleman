@@ -51,7 +51,6 @@ p {
     height: 8vh;
     display: flex;
     align-items: center;
-
     position: relative;
 }
 
@@ -111,7 +110,6 @@ p {
 
 #container-around-top-bar {
     height: 8vh;
-
     display: flex;
     align-items: center;
     justify-content: center;
@@ -139,23 +137,17 @@ p {
     align-items: flex-start;
     padding: 1vw 1vw;
     box-sizing: border-box;
-
     border-radius: 10px;
-
 }
 
 .profile-info-popup-item {
     display: flex;
     flex-direction: row;
     align-items: center;
-
     padding: .4vw .4vw;
-
     color: #35383b;
     font-size: 1rem;
-
     cursor: pointer;
-
     overflow: hidden;
     white-space: nowrap;
 }
@@ -163,7 +155,6 @@ p {
 .profile-info-popup-item:hover {
     color: #35383b;
     font-weight: 500;
-
 }
 
 .profile-info-vert-aligner {
@@ -177,8 +168,6 @@ p {
     margin-right: .5vw;
     font-size: 1.4rem;
 }
-
-
 
 .main-container-profile-banner {
     width: 100%;
@@ -492,7 +481,6 @@ p {
     padding: .4vw .7vw !important;
     margin-bottom: 0;
     border-radius: 7px;
-
     font-weight: 500;
 }
 
@@ -633,7 +621,6 @@ p {
     align-items: center;
     border: 2px solid #000;
     font-size: 1.5rem;
-
     color: #000;
 }
 
@@ -670,13 +657,6 @@ p {
     left: 0;
     display: none;
     flex-direction: row;
-
     transform: scale(1.5);
     transition: all 2s ease-in-out;
-
 }
-
-
-
-
-

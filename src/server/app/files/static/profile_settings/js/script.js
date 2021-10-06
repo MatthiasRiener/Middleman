@@ -164,3 +164,17 @@ $(document).on("mouseenter", ".profile-container-top-banner-settings", function 
 $(document).on("mouseleave", ".profile-container-top-banner-settings", function (e) {
     $(".banner-hover-container").removeClass("banner-hovering-class");
 });
+
+
+$('body').on('click', '.change-setting-button, .profile-settings-button, .privacy-request-data', function () {
+    var id = $(this)[0].id.replace("btn-", "");
+    $('.' + id + "-change").css("visibility", "visible");
+})
+
+$('body').on('click', '.change-setting-cancel > p, .change-setting-close, .change-setting-overall', function (e) {
+    if (e.target != this) return;
+    var el = $(this).closest(".change-setting-overall");
+    el.css("visibility", "hidden");
+})
+
+
