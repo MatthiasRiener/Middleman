@@ -19,6 +19,10 @@
                 <p>Mein Account</p>
             </div>
 
+            <div class="sidebar-settings-item" id="sidebar-item-my-privacy">
+                <p>Privacy & Safety</p>
+            </div>
+
             <div class="sidebar-settings-spacer"></div>
             <p class="sidebar-settings-title">Rechnung</p>
 
@@ -83,11 +87,11 @@
                                 <p>Change Banner</p>
                             </div>
 
-                            
+
                         </div>
                         <div class="profile-container-top-banner-infos-settings">
 
-                            
+
                             <div class="profile-container-top-banner-settings-image">
                                 <div>
                                     <ion-icon name="add"></ion-icon>
@@ -105,12 +109,44 @@
                             <div class="profile-info-item-settings">
                                 <div>
                                     <p>Benutername</p>
-                                    <p>Matts#3596</p>
+                                    <p>Matts</p>
                                 </div>
 
-                                <div>
+                                <div class="change-setting-button" id="btn-username">
                                     <p>Bearbeiten</p>
                                 </div>
+                                <div class="change-setting-overall username-change">
+                                    <div class="change-setting-popup">
+                                        <ion-icon name="close" class="change-setting-close "></ion-icon>
+                                        <div class="change-setting-header">
+                                            <p class="change-setting-title">Change your username</p>
+                                            <p class="change-setting-subtitle">Enter a new username and your existing
+                                                password.</p>
+                                        </div>
+
+                                        <div class="change-setting-body">
+                                            <div class="change-settings-input-field">
+                                                <p>Username</p>
+                                                <input type="text" value="Matts" />
+                                            </div>
+
+                                            <div class="change-settings-input-field">
+                                                <p>Current password</p>
+                                                <input type="password" />
+                                            </div>
+                                        </div>
+
+                                        <div class="change-setting-bottom">
+                                            <div class="change-setting-cancel">
+                                                <p>Cancel</p>
+                                            </div>
+                                            <div class="change-setting-done">
+                                                <p>Confirm</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
 
                             <div class="profile-info-item-settings">
@@ -119,8 +155,40 @@
                                     <p>riener.matts@mail.com</p>
                                 </div>
 
-                                <div>
+                                <div class="change-setting-button" id="btn-email">
                                     <p>Bearbeiten</p>
+                                </div>
+
+                                <div class="change-setting-overall email-change">
+                                    <div class="change-setting-popup">
+                                        <ion-icon name="close" class="change-setting-close "></ion-icon>
+                                        <div class="change-setting-header">
+                                            <p class="change-setting-title">Change your email</p>
+                                            <p class="change-setting-subtitle">Enter a new email and your existing
+                                                password.</p>
+                                        </div>
+
+                                        <div class="change-setting-body">
+                                            <div class="change-settings-input-field">
+                                                <p>Email</p>
+                                                <input type="text" />
+                                            </div>
+
+                                            <div class="change-settings-input-field">
+                                                <p>Current password</p>
+                                                <input type="password" />
+                                            </div>
+                                        </div>
+
+                                        <div class="change-setting-bottom">
+                                            <div class="change-setting-cancel">
+                                                <p>Cancel</p>
+                                            </div>
+                                            <div class="change-setting-done">
+                                                <p>Confirm</p>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
 
@@ -130,8 +198,40 @@
                                     <p>Du hast noch keine Telefonnummer hinzugefügt.</p>
                                 </div>
 
-                                <div>
+                                <div class="change-setting-button" id="btn-phonenumber">
                                     <p>Hinzufügen</p>
+                                </div>
+
+                                <div class="change-setting-overall phonenumber-change">
+                                    <div class="change-setting-popup">
+                                        <ion-icon name="close" class="change-setting-close "></ion-icon>
+                                        <div class="change-setting-header">
+                                            <p class="change-setting-title">Add your phonenumber</p>
+                                            <p class="change-setting-subtitle">Enter a new username and your
+                                                existing password.</p>
+                                        </div>
+
+                                        <div class="change-setting-body">
+                                            <div class="change-settings-input-field">
+                                                <p>phonenumber</p>
+                                                <input type="text" />
+                                            </div>
+
+                                            <div class="change-settings-input-field">
+                                                <p>Current password</p>
+                                                <input type="password" />
+                                            </div>
+                                        </div>
+
+                                        <div class="change-setting-bottom">
+                                            <div class="change-setting-cancel">
+                                                <p>Cancel</p>
+                                            </div>
+                                            <div class="change-setting-done">
+                                                <p>Confirm</p>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -148,8 +248,45 @@
                             machen.
                         </p>
 
-                        <div class="profile-settings-button">
+                        <div class="profile-settings-button" id="btn-password">
                             <p>Passwort ändern</p>
+                        </div>
+
+                        <div class="change-setting-overall password-change">
+                            <div class="change-setting-popup">
+                                <ion-icon name="close" class="change-setting-close "></ion-icon>
+                                <div class="change-setting-header">
+                                    <p class="change-setting-title">Change your password</p>
+                                    <p class="change-setting-subtitle">Enter a new username and your
+                                        existing password.</p>
+                                </div>
+
+                                <div class="change-setting-body">
+                                    <div class="change-settings-input-field">
+                                        <p>Current password</p>
+                                        <input type="password" />
+                                    </div>
+
+                                    <div class="change-settings-input-field">
+                                        <p>New password</p>
+                                        <input type="password" />
+                                    </div>
+
+                                    <div class="change-settings-input-field">
+                                        <p>confirm new password</p>
+                                        <input type="password" />
+                                    </div>
+                                </div>
+
+                                <div class="change-setting-bottom">
+                                    <div class="change-setting-cancel">
+                                        <p>Cancel</p>
+                                    </div>
+                                    <div class="change-setting-done">
+                                        <p>Confirm</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -158,11 +295,69 @@
                     <div class="delete-or-deactive-container">
                         <p class="two-factor-title">Account löschen</p>
                         <div>
-                            <div class="profile-settings-button">
+                            <div class="profile-settings-button" id="btn-deactivate-account">
                                 <p>Account deaktivieren</p>
                             </div>
-                            <div class="profile-settings-button">
+
+                            <div class="change-setting-overall deactivate-account-change">
+                                <div class="change-setting-popup">
+                                    <ion-icon name="close" class="change-setting-close "></ion-icon>
+                                    <div class="change-setting-header">
+                                        <p class="change-setting-title">Deactivate your account</p>
+                                        <p class="change-setting-subtitle">Are your sure you want to deactivate your
+                                            account?</p>
+                                    </div>
+
+                                    <div class="change-setting-body">
+                                        <div class="change-settings-input-field">
+                                            <p>password</p>
+                                            <input type="password" />
+                                        </div>
+
+                                    </div>
+
+                                    <div class="change-setting-bottom">
+                                        <div class="change-setting-cancel">
+                                            <p>Cancel</p>
+                                        </div>
+                                        <div class="change-setting-done">
+                                            <p>Deactivate</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="profile-settings-button" id="btn-delete-account">
                                 <p>Account löschen</p>
+                            </div>
+
+
+                            <div class="change-setting-overall delete-account-change">
+                                <div class="change-setting-popup">
+                                    <ion-icon name="close" class="change-setting-close "></ion-icon>
+                                    <div class="change-setting-header">
+                                        <p class="change-setting-title">Delete your account</p>
+                                        <p class="change-setting-subtitle">Are your sure you want to delete your
+                                            account?</p>
+                                    </div>
+
+                                    <div class="change-setting-body">
+                                        <div class="change-settings-input-field">
+                                            <p>password</p>
+                                            <input type="password" />
+                                        </div>
+
+                                    </div>
+
+                                    <div class="change-setting-bottom">
+                                        <div class="change-setting-cancel">
+                                            <p>Cancel</p>
+                                        </div>
+                                        <div class="change-setting-done" style="background-color: #DF2E2E;">
+                                            <p>Delete</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -394,6 +589,80 @@
                     </div>
                 </div>
 
+                <div class="section-my-privacy">
+
+                    <div class="section-link-tos">
+                        <p>Take a look at our <span>Terms of Service</span> and <span>Privacy Policy</span>.</p>
+                    </div>
+
+                    <p class="privacy-subtitle">How we use your data</p>
+                    <div class="privacy-item">
+                        <div class="privacy-item-header">
+                            <p>Process data to improve Middleman</p>
+                            <div class="privacy-item-button privacy-activated">
+                                <p>Activated</p>
+                            </div>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut voluptatem pariatur mollitia
+                            maiores facere officia vel atque, repellendus, nostrum dicta nam itaque cumque, ex quae
+                            labore quis id! Magnam, architecto?</p>
+                    </div>
+
+                    <div class="privacy-item">
+                        <div class="privacy-item-header">
+                            <p>Process data to improve Middleman</p>
+                            <div class="privacy-item-button privacy-activated">
+                                <p>Activated</p>
+                            </div>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut voluptatem pariatur mollitia
+                            maiores facere officia vel atque, repellendus, nostrum dicta nam itaque cumque, ex quae
+                            labore quis id! Magnam, architecto?</p>
+                    </div>
+
+                    <div class="privacy-item">
+                        <div class="privacy-item-header">
+                            <p>Request my data</p>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, acere officia vel atque, repellendus, nostrum dicta nam itaque
+                            cumque, ex quae labore quis id! Magnam, architecto?</p>
+                        <div class="privacy-request-data" id="btn-request-data">
+                            <p>Request Data</p>
+                        </div>
+
+                        <div class="change-setting-overall request-data-change">
+                            <div class="change-setting-popup">
+                                <ion-icon name="close" class="change-setting-close "></ion-icon>
+                                <div class="change-setting-header">
+                                    <p class="change-setting-title">Request my data</p>
+                                    <p class="change-setting-subtitle">Requesting data may take up to 30 days. </p>
+                                </div>
+
+                                <div class="change-setting-body">
+                                    <div class="change-settings-input-field">
+                                        <p>password</p>
+                                        <input type="password" />
+                                    </div>
+
+                                </div>
+
+                                <div class="change-setting-bottom">
+                                    <div class="change-setting-cancel">
+                                        <p>Cancel</p>
+                                    </div>
+                                    <div class="change-setting-done">
+                                        <p>Request</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+
                 <div class="section-my-language">
                     <div class="my-language-item" id="dk">
                         <div class="select-language-button">
@@ -539,7 +808,7 @@
                         Theme
                     </p>
 
-                    <div class="appearance-section-theme-item theme-selected">
+                    <div class="appearance-section-theme-item ">
                         <div class="appearance-section-select">
                             <div></div>
                         </div>
@@ -547,7 +816,7 @@
                         <p>Dark</p>
                     </div>
 
-                    <div class="appearance-section-theme-item">
+                    <div class="appearance-section-theme-item theme-selected">
                         <div class="appearance-section-select">
                             <div></div>
                         </div>
@@ -563,6 +832,7 @@
             </div>
         </div>
     </div>
+
 </body>
 
 </html>
