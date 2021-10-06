@@ -6,6 +6,13 @@ from setup import fernet
 authService = AuthService()
 
 
+def verify_decrypted_token(func):
+    def wrapper(*args, **kwargs):
+        jwt_token_decrypted(func)
+        return func(*args, **kwargs)
+    return wrapper
+
+
 def jwt_token_decrypted(func):
     def wrapper():
         token = read_token_from_request()

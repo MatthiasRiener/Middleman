@@ -6,7 +6,9 @@ from flask import render_template, Blueprint
 from ..authentication.auth_service import AuthService
 from ...annotations.token.token_decrypt import jwt_token_decrypted
 from ...db.settings import oidc
-from ...repository.authentication_repository import AuthenticationRepository
+from ...repository.user_repository import UserRepository
+
+user_repo = UserRepository()
 
 authentication_page = Blueprint("authentication", __name__)
 
@@ -25,7 +27,7 @@ def login():
 
     token_info = auth_service.get_token_info(access_token)
 
-    user = AuthenticationRepository.createUser(
+    user = user_repo.createUser(
         u_id=token_info.get('sub'),
         username=token_info.get('preferred_username'),
         surname=token_info.get('given_name'),
