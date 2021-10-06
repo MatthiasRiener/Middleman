@@ -17,7 +17,7 @@ auth_service = AuthService()
 # for future: use DI
 
 
-@authentication_page.route('/log-in', methods=["GET"])
+@authentication_page.route('/login', methods=["GET"])
 @oidc.require_login
 def login():
     access_token = oidc.get_access_token()
@@ -43,7 +43,7 @@ def login():
     return redirect
 
 
-@authentication_page.route('/log-out', methods=["GET"])
+@authentication_page.route('/logout', methods=["GET"])
 @jwt_token_decrypted
 def logout(refresh_token):
     user_credentials = oidc.user_getinfo(
