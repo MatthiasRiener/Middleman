@@ -178,3 +178,90 @@ $('body').on('click', '.change-setting-cancel > p, .change-setting-close, .chang
 })
 
 
+$('body').on('click', '.change-setting-done', function () {
+    var el = $(this).closest('.change-setting-overall');
+    var id = el[0].id.toString();
+
+
+    // user möchte account detail ändern
+    if (id.startsWith("changing-")) {
+        console.log("Changing Section")
+        id = id.replace("changing-", "");
+
+        var bodyContainer = el.children('.change-setting-popup').children('.change-setting-body');
+
+        var newValue = "";
+        var confirmationPassword = "";
+
+
+
+        $('input', bodyContainer.children('.change-settings-input-field')).each(function () {
+            var inputField = $(this);
+            /* 
+                possible cases: 
+                input-field-new-value => neue value
+                input-field-confirmation-password => confirm password
+                input-field-confirmation-password-new => check if password is gleich input-field-new-value
+            */
+
+            newValue += inputField.hasClass("input-field-new-value") ? inputField.val() : '';
+            confirmationPassword += inputField.hasClass("input-field-confirmation-password") ? inputField.val() : '';
+
+            // TODO: Test Case für Password change
+        });
+        requestUpdate(id, newValue, confirmationPassword);
+        return;
+    }
+
+    // user möchte account löschen oder deaktivieren
+
+    if (id.startsWith("account-")) {
+        console.log("Account Section: ");
+        id = id.replace("account-", "");
+
+        var bodyContainer = el.children('.change-setting-popup').children('.change-setting-body');
+        var confirmationPassword = "";
+
+        $('input', bodyContainer.children('.change-settings-input-field')).each(function () {
+            var inputField = $(this);
+            /* 
+                possible cases: 
+                input-field-new-value => neue value
+                input-field-confirmation-password => confirm password
+                input-field-confirmation-password-new => check if password is gleich input-field-new-value
+            */
+
+            confirmationPassword += inputField.hasClass("input-field-confirmation-password") ? inputField.val() : '';
+
+            // TODO: Test Case für Password change
+        });
+
+        /*
+            Mögliche cases:
+            id => account-delete
+            id => account-deactivate
+        */
+
+        if (id == 'delete') {
+            deleteUser(confirmationPassword);
+        } else if (id == 'deactivate') {
+            deactivateUser(confirmationPassword);
+        } 
+        return;
+    }
+
+    // user möchte daten anfordern
+
+    if (id.startsWith("privacy-")) {
+        console.log("Privacy Section: ")
+        id = id.replace("privacy-", "");
+
+        // TODO: Handle request Data!
+
+        return;
+    }
+
+    console.log("id: ", id);
+
+});
+

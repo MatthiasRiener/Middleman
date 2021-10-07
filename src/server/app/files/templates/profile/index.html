@@ -32,9 +32,14 @@
     <script src={{ url_for('static', filename="auth/AuthenticationService.js" ) }} type="text/javascript"></script>
     <script src={{ url_for('static', filename="profile/js/loadSettings.js" ) }} defer type="text/javascript"></script>
 
+    <script src={{ url_for('static', filename="profile/js/requests.js" ) }} defer type="text/javascript"></script>
+
 
     <link rel="stylesheet" type="text/css" href="/static/profile_settings/css/styles.css" />
     <script src={{ url_for('static', filename="profile_settings/js/script.js" ) }} type="text/javascript" defer></script>
+
+
+
 
     <script src="https://cdn.amcharts.com/lib/4/core.js"></script>
     <script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
@@ -48,7 +53,6 @@
         if ("{{ newLogIn }}") {
             setAccessToken("{{ access }}");
             setRefreshToken("{{ refresh }}");
-            console.log("new login")
         }
 
     </script>

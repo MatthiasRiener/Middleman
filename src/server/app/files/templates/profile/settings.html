@@ -115,7 +115,7 @@
                                 <div class="change-setting-button" id="btn-username">
                                     <p>Bearbeiten</p>
                                 </div>
-                                <div class="change-setting-overall username-change">
+                                <div class="change-setting-overall username-change" id="changing-username">
                                     <div class="change-setting-popup">
                                         <ion-icon name="close" class="change-setting-close "></ion-icon>
                                         <div class="change-setting-header">
@@ -127,12 +127,12 @@
                                         <div class="change-setting-body">
                                             <div class="change-settings-input-field">
                                                 <p>Username</p>
-                                                <input type="text" value="Matts" />
+                                                <input type="text" value="Matts" class="input-field-new-value" />
                                             </div>
 
                                             <div class="change-settings-input-field">
                                                 <p>Current password</p>
-                                                <input type="password" />
+                                                <input type="password" class="input-field-confirmation-password"/>
                                             </div>
                                         </div>
 
@@ -159,7 +159,7 @@
                                     <p>Bearbeiten</p>
                                 </div>
 
-                                <div class="change-setting-overall email-change">
+                                <div class="change-setting-overall email-change" id="changing-email">
                                     <div class="change-setting-popup">
                                         <ion-icon name="close" class="change-setting-close "></ion-icon>
                                         <div class="change-setting-header">
@@ -171,12 +171,12 @@
                                         <div class="change-setting-body">
                                             <div class="change-settings-input-field">
                                                 <p>Email</p>
-                                                <input type="text" />
+                                                <input type="text" class="input-field-new-value" />
                                             </div>
 
                                             <div class="change-settings-input-field">
                                                 <p>Current password</p>
-                                                <input type="password" />
+                                                <input type="password" class="input-field-confirmation-password"/>
                                             </div>
                                         </div>
 
@@ -202,7 +202,7 @@
                                     <p>Hinzufügen</p>
                                 </div>
 
-                                <div class="change-setting-overall phonenumber-change">
+                                <div class="change-setting-overall phonenumber-change" id="changing-phonenumber">
                                     <div class="change-setting-popup">
                                         <ion-icon name="close" class="change-setting-close "></ion-icon>
                                         <div class="change-setting-header">
@@ -214,12 +214,12 @@
                                         <div class="change-setting-body">
                                             <div class="change-settings-input-field">
                                                 <p>phonenumber</p>
-                                                <input type="text" />
+                                                <input type="text" class="input-field-new-value" />
                                             </div>
 
                                             <div class="change-settings-input-field">
                                                 <p>Current password</p>
-                                                <input type="password" />
+                                                <input type="password" class="input-field-confirmation-password" />
                                             </div>
                                         </div>
 
@@ -252,7 +252,7 @@
                             <p>Passwort ändern</p>
                         </div>
 
-                        <div class="change-setting-overall password-change">
+                        <div class="change-setting-overall password-change" id="changing-password">
                             <div class="change-setting-popup">
                                 <ion-icon name="close" class="change-setting-close "></ion-icon>
                                 <div class="change-setting-header">
@@ -264,17 +264,17 @@
                                 <div class="change-setting-body">
                                     <div class="change-settings-input-field">
                                         <p>Current password</p>
-                                        <input type="password" />
+                                        <input type="password" class="input-field-confirmation-password" />
                                     </div>
 
                                     <div class="change-settings-input-field">
                                         <p>New password</p>
-                                        <input type="password" />
+                                        <input type="password" class="input-field-new-value" />
                                     </div>
 
                                     <div class="change-settings-input-field">
                                         <p>confirm new password</p>
-                                        <input type="password" />
+                                        <input type="password" class="input-field-confirmation-password-new" />
                                     </div>
                                 </div>
 
@@ -299,7 +299,7 @@
                                 <p>Account deaktivieren</p>
                             </div>
 
-                            <div class="change-setting-overall deactivate-account-change">
+                            <div class="change-setting-overall deactivate-account-change" id="account-deactivate">
                                 <div class="change-setting-popup">
                                     <ion-icon name="close" class="change-setting-close "></ion-icon>
                                     <div class="change-setting-header">
@@ -311,7 +311,7 @@
                                     <div class="change-setting-body">
                                         <div class="change-settings-input-field">
                                             <p>password</p>
-                                            <input type="password" />
+                                            <input type="password" class="input-field-confirmation-password"/>
                                         </div>
 
                                     </div>
@@ -332,7 +332,7 @@
                             </div>
 
 
-                            <div class="change-setting-overall delete-account-change">
+                            <div class="change-setting-overall delete-account-change" id="account-delete">
                                 <div class="change-setting-popup">
                                     <ion-icon name="close" class="change-setting-close "></ion-icon>
                                     <div class="change-setting-header">
@@ -344,7 +344,7 @@
                                     <div class="change-setting-body">
                                         <div class="change-settings-input-field">
                                             <p>password</p>
-                                            <input type="password" />
+                                            <input type="password" class="input-field-confirmation-password"/>
                                         </div>
 
                                     </div>
@@ -630,7 +630,7 @@
                             <p>Request Data</p>
                         </div>
 
-                        <div class="change-setting-overall request-data-change">
+                        <div class="change-setting-overall request-data-change" id="privacy-request-data">
                             <div class="change-setting-popup">
                                 <ion-icon name="close" class="change-setting-close "></ion-icon>
                                 <div class="change-setting-header">
@@ -641,7 +641,7 @@
                                 <div class="change-setting-body">
                                     <div class="change-settings-input-field">
                                         <p>password</p>
-                                        <input type="password" />
+                                        <input type="password" class="input-field-confirmation-password"/>
                                     </div>
 
                                 </div>
